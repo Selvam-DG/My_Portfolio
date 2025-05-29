@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    min-height: 100px;
+    background-color: rgb(225, 218, 218);
+    
+    padding: 10px;
+    margin-top: 20px;
+}
+footer{
+    width: 100%;
+    clear: both;
+    position: relative;
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+
+.container-xxl{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;;
+}
+main{
+    flex:1;
+}
+dt {
+  font-weight: bold;
+}
+
+dl,
+dd {
+  font-size: 0.9rem;
+}
+
+dd {
+  margin-bottom: 1em;
+}
