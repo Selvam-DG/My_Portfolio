@@ -182,8 +182,8 @@
 }
 @media (max-width: 576px) {
     #flex .content .image img{
-        width : 1000px;
-        height : 75px;
+        width : 100px;
+        height : 100px;
     }
 }
 /* Footer */
