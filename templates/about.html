@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About</title>
     <link rel="stylesheet" href="../static/css/styles.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" >
@@ -11,205 +11,301 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
 </head>
-<body id = "aboutpage">
-    <header id="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>
-                        <a href="../index.html">Selvam Dasari</a>
-                    </h1>
-                </div>
-                <nav class="navbar navbar-expand-lg navbar-dark">
-            
-                    <div class="container-fluid justify-content-end">
-                        <!-- toggle button -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- Navabr control -->
-                        <div class="collapse navbar-collapse" id="navbarContent">
-                            <ul >
-                                <li ><a href="../index.html" >Home</a> </li>
-                                <li ><a href="./templates/about.html" >About</a> </li>
-                                <li class="dropdown">
-                                    <a href="#" >Portfolio</a>
-                                    <ul class="dropdown-content">
-                                        <li><a href="#">Exploratory Data Analysis</a></li>
-                                        <li><a href="#">Machine Learning</a></li>
-                                    </ul>
-                                </li>
-
-                                <li ><a href="#" >Blog</a> </li>
-                                <li ><a href="./templates/contact.html" >contact</a> </li>
-                        
+<body id = "custompage">
+    <header id="header" >
+        <nav class="navbar navbar-expand-lg navbar-dark p-md-3 ms-md-5 py-3  text-white" >
+            <div class="container-fluid">
+                <h3 class="navbar-brand"> <a href="../index.html" class="text-white text-decoration-none">Selvam Dasari</a>  </h3>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"  aria-label="Toggle navigation"   >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Sidebar Navigation Menu -->
+                <div class="collapse navbar-collapse justify-content-end mt-3" id="navbarContent" >
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link text-white  " role="button" data-bs-toggle ="dropdown" href="#" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-white " href="./eda.html">Exploratory Data Analysis</a></li>
+                            <li><a class="dropdown-item text-white " href="./machine_learning.html">Machine Learning</a></li>
+                            <li><a class="dropdown-item text-white " href="./django_projects.html">Django Projects</a></li>
+                            <li><a class="dropdown-item text-white " href="./nodejs_projects.html">Node.js Projects</a></li>
                             </ul>
-                        </div>
-                    </div>
-                </nav>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>        
+        </nav>
     </header>
+ 
     
-    <div id="about-section">
-        <div class="content-cover">
+   
+    
+    <section id="about-section" class="d-flex flex-column justify-content-center align-item-center">
+        <div class="content-cover ">
             <h3>About Me</h3>
         </div>
-
-    </div>
-    <div class="container-button" style="justify-content: center;">
-        <ul class="list-inline  justify-content-center ">
-            <li class="list-inline-item px-3">
-                <button class="btn">
-                    <a href="#Introduction" class=" text-decoration-none text-hover">Introduction</a></li>
-                </button>
-            <li class="list-inline-item">
-                <button class="btn"><a href="#experience" class=" text-decoration-none text-hover">Experience</a></button>
-            </li>
-            <li class="list-inline-item">
-                <button class="btn"><a href="#education" >Education</a></button>
-            </li>
-            <li class="list-inline-item">
-                <button class="btn"><a href="#certificates" >Certification</a></button>
-            </li>
-            <li class="list-inline-item">
-                <button class="btn"><a href="#skills" >Skills</a></button>
-            </li>
+    </section>
+    <div class="container-button  d-flex justify-content-center" >
+        <ul class="list-inline  mb-0 ">
+            <li class="list-inline-item"><button class="btn btn-link me-md-4"> <a href="#introduction" >Introduction</a></button></li>
+            <li class="list-inline-item "> <button class="btn btn-link me-md-4"><a href="#experience" >Experience</a></button>  </li>
+            <li class="list-inline-item"><button class="btn btn-link me-md-4"><a href="#projects" >Projects</a></button></li>
+            <li class="list-inline-item"> <button class="btn btn-link me-md-4"><a href="#education" >Education</a></button> </li>
+            <li class="list-inline-item"><button class="btn btn-link me-4"><a href="#skills" >Skills</a></button></li>
+            <li class="list-inline-item"><button class="btn btn-link me-md-4"><a href="#certificates" >Certification</a></button></li>
             
+        </ul>
+    </div>
+     <main class="mt-5">  
+        <div class="container mt-5">
+            <!-- Introduction -->
+            <section class="content " id="introduction">
+                <h2><i class="fas fa-user"></i> About Me</h2><hr>
+                <p>
+                    🎓 I’m a passionate Master’s student in Engineering Sciences (Mechatronics) at Technische Hochschule Rosenheim, driven by a strong interest in bridging intelligent software with real-world systems. My academic journey has equipped me with a solid foundation in machine learning, computer vision, image processing, and data science — and I’m now expanding that with real-world software development experience.
+                </p>
+                <p>
+                    💻 Currently, I’m working as a Software Engineer Intern - Data & Web Tools at fischer group, where I contribute to developing internal tools that support data-driven decision-making. This hands-on role has enhanced my skills in Python, data handling, and web development (including HTML, CSS, JavaScript, and the Django web framework), empowering me to build scalable, user-friendly applications.
+                </p>
+                <p>
+                    🔍 I’m especially excited by the intersection of AI, automation, and intelligent systems, and I enjoy applying my engineering mindset to solve technical challenges in innovative ways.
+                </p>
+                
+                <p>
+                    🌟 What sets me apart is my hybrid profile: a mechanical engineering background, strong coding skills, and a growing expertise in intelligent technologies — all aimed at building smarter, more autonomous systems.
+                </p>
 
+            </section>
+            <!-- Experience -->
+            <section class="content"  id="experience"> 
+                <h2><i class="fas fa-briefcase"></i> Experience</h2><hr>
+                <div class="job-card">
+                    <h4>Software Engineer Intern – Data & Web Tools</h4>
+                    <h6>fischer group, Waldachtal, Germany</h6>
+                    <p>Mar 2025 – Present | Internship | On-site</p>
+                    <ul>
+                        <li>Designed and implemented a structured SQL Server database using SSMS for storing organizational data.</li>
+                        <li>Applied data normalization principles to optimize data relationships and scalability.</li>
+                        <li>Developed Python scripts for automating data ingestion and processing.</li>
+                        <li>Built a web application using Django (backend) and HTML, CSS, JavaScript (frontend).</li>
+                    </ul>
+                </div>
+                <div class="job-card">
+                    <h4>Mechanical Engineer – Data & Process Analytics</h4>
+                    <h6>MRF Tyres, Hyderabad, India</h6>
+                    <p>Oct 2021 – Aug 2023 | Full-time | On-site</p>
+                    <ul>
+                        <li>Analyzed machine performance and delay data from MES and SAP using SQL and Excel to improve KPIs (MTTR, MTBF).</li>
+                        <li>Created dashboards with Power BI, Tableau, and Python for operational insights.</li>
+                        <li>Managed material master data and spare parts in SAP, improving resource planning.</li>
+                        <li>Applied Lean principles to reduce machine downtime and improve OEE.</li>
+                    </ul>
+                </div>
 
+                <div class="job-card">
+                    <h4>Junior Executive – Mechanical Engineer (Data-Focused)</h4>
+                    <h6>MRF Tyres, Hyderabad, India</h6>
+                    <p>Sep 2019 – Sep 2021 | Full-time | On-site</p>
+                    <ul>
+                        <li>Supported commissioning of Tyre Building and Bead Apexing machines; optimized performance using PLC data.</li>
+                        <li>Analyzed breakdown patterns using Excel PivotTables and MES reports.</li>
+                        <li>Collected industrial data for failure trend and reliability analysis.</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <h4>Bachelor Thesis</h4>
+                    <h6>Lucas TVS, Puducherry, India</h6>
+                    <p>Jan 2019 – May 2019 | Work Study | On-site</p>
+                    <ul>
+                        <li>Conducted data analysis to reduce surge failure in production using DMAIC, Minitab, and Excel.</li>
+                    </ul>
+                </div>
+
+                <div class="job-card">
+                    <h4>Summer Intern</h4>
+                    <h6>Indian Institute of Science (IISc), Bengaluru, India</h6>
+                    <p>May 2018 – Jul 2018 | Internship | On-site</p>
+                    <ul>
+                        <li>Gained hands-on experience in applied research and engineering data analysis.</li>
+                    </ul>
+                </div>
+
+            </section>
+
+            <!-- Projects -->
+            <section class="content" id="projects"> 
+                <h2 ><i class="fas fa-project-diagram"></i> Projects</h2><hr>
+                 <div class="work-card">
+                    <h4>🔗 Web App – Internal Tool for fischer group</h4>
+                    <p>
+                    Developed a web application for internal data monitoring and visualization using <strong>Django</strong>, <strong>HTML/CSS</strong>, and <strong>JavaScript</strong>.
+                    </p>
+                    <ul>
+                        <li>Backend built with Django and SQLite (dev) → SQL Server (prod).</li>
+                        <li>Visualized key KPIs and performance data on dashboards.</li>
+                        <li>Implemented login/authentication and role-based access.</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h4>Stereo Camera System for Part Localization</h4>
+                    <h6>Technische Hochschule Rosenheim</h6>
+                    <p> Stereo vision system for robot bin-picking with depth mapping via OpenCV.</p>
+                    <ul>
+                        <li>Installed Camera and caliberated</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h4>Django Weather Dashboard Project</h4>
+                    <p>
+                    Created an interactive dashboard using <strong>Django Framework</strong> and <strong>Python</strong> to view the weather at Custom location for custom of Days.
+                    </p>
+                    <ul>
+                    <li>Location and days from the users .</li>
+                    <li>Using WeatherApi to get details and show to the user</li>
+                    
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h4>📊 Data Analytics – Machine Downtime Dashboard</h4>
+                    <p>
+                    Created an interactive dashboard using <strong>Power BI</strong> and <strong>SQL</strong> to analyze machine delays and breakdowns at MRF.
+                    </p>
+                    <ul>
+                    <li>Cleaned and transformed MES data using Power Query.</li>
+                    <li>Calculated MTTR, MTBF, and delay distribution across lines.</li>
+                    <li>Improved maintenance planning based on data-driven insights.</li>
+                    </ul>
+                </div>
+                 <div class="work-card">
+                    <h4>📈 Statistical Analysis – Reducing Surge Failures (Thesis)</h4>
+                    <p>
+                    Bachelor thesis project using <strong>DMAIC</strong>, <strong>Minitab</strong>, and <strong>Excel</strong> for root cause analysis of surge failures in starter motors at Lucas TVS.
+                    </p>
+                    <ul>
+                    <li>Applied hypothesis testing, control charts, and regression analysis.</li>
+                    <li>Implemented corrective actions and monitored results.</li>
+                    </ul>
+                </div>
+                <div class="work-card">
+                    <h4>🧪 Exploratory Data Analysis – Tyre Defect Detection</h4>
+                    <p>
+                    Conducted EDA using <strong>Pandas</strong>, <strong>Matplotlib</strong>, and <strong>Seaborn</strong> on tyre quality data to identify common failure modes.
+                    </p>
+                    <ul>
+                    <li>Identified top contributing factors to defects.</li>
+                    <li>Presented findings to quality team for process optimization.</li>
+                    </ul>
+                </div>
+                
+            </section>
+
+            <!-- Education -->
+            <section class="content" id="education"> 
+                <h2 ><i class="fas fa-graduation-cap"></i> Education</h2> <hr>
+                
+                <div class="edu-item">
+                    <h4>Master of Engineering Sciences in Mechatronics</h4>
+                    <p><strong>Technische Hochschule Rosenheim, Germany</strong></p>
+                    <p>2023 – 2025 </p>
+                    <ul>
+                    <li>Subjects of Interest: Advanced Mathematics, Statistics, Machine Learning, Image Processing</li>
+                    
+                    </ul>
+                </div>
+                 <div class="edu-item">
+                    <h4>Bachelor of Engineering in Mechanical Engineering</h4>
+                    <p><strong>Pondicherry University,Puducherry India</strong></p>
+                    <p>2015 – 2019 </p>
+                    <ul>
+                    <li>Graduated with First Class with Distinction.</li>
+                    <li>Completed thesis on “Reducing Surge Failures in Starter Motors”.</li>
+                    </ul>
+                </div>
+                 <div class="edu-item">
+                    <h4>HSC (Class XII)</h4>
+                    <p><strong>Krishnamalli Junior College</strong></p>
+                    <p>2013 – 2015 </p>
+                </div>
+                <div class="edu-item">
+                    <h4>SSLC (Class X)</h4>
+                    <p><strong>Jnana Jyothi Vidya Mandir</strong></p>
+                    <p>2012 – 2013 </p>
+                </div>
+                                
+            </section>
+
+            <!-- Skills -->
+            <section class="content" id="skills"> 
+                <h2 ><i class="fas fa-tools"></i> Skills</h2><hr>
+                
+                <ul>
+                    <li><strong>Programming:</strong> Python, C, C++, SQL, HTML, CSS, JavaScript</li>
+                    <li><strong>Frameworks:</strong> Django, TensorFlow, PyTorch, Keras, OpenCV</li>
+                    <li><strong>Tools:</strong> GitHub, Power BI, Tableau, Jupyter Notebook, SSMS</li>
+                    <li><strong>Data Engineering:</strong> SQL Server, PostgreSQL, KNIME</li>
+                    <li><strong>Automation & Simulation:</strong> MATLAB, Simulink, Siemens TIA Portal</li>
+                </ul>
+                
+            </section>
+            <!-- Languages -->
+            <section class="content" id="languages"> 
+                <h4 class="card-title"><i class="fas fa-language"></i> Languages</h4><hr>
+                <div class="card-body">
+                Tamil (Native), Telugu (C2), Hindi (C1), English (C1), German (B2)
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="content" id="certificates"> 
+                <h2><i class="fas fa-certificate"></i> Certifications</h2><hr>
+                
+                <ul>
+                    <li>Data Science and AI Certification – IBM | Mar 2024</li>
+                    <li>Machine Learning for Engineers – FAU Erlangen | Aug 2023</li>
+                    <li>Complete Data Science Bootcamp – Udemy | Feb 2024</li>
+                    <li>SQL & PostgreSQL – Udemy | Mar 2023</li>
+                </ul>
+                
+            </section>
+           
+
+        </div>
+    </main>
+    
+
+    <footer id="footer" class="bg-dark text-white text-center mt-md-5 py-4">
+        <h3 style ="color:white;">Connect with Me</h3>
+
+        <ul class="d-flex flex-wrap justify-content-center list-unstyled" id="social-icons">
+            <li class="mx-2"> <a href="https://www.linkedin.com/in/selvamdasari55/" target="_blank" class="text-white"><i class="fab fa-linkedin"></i> </a>    </li>
+            <li class="mx-2"> <a href="https://github.com/Selvam-DG" target="_blank" class="text-white"><i class="fab fa-github"></i>
+                
+            <li class="mx-2"> <a href="https://www.kaggle.com/dgselvam" target="_blank" class="text-white"><i class="fab fa-kaggle"></i></a></li>
+            <li class="mx-2"><a href="https://www.xing.com/profile/Selvam_DasariGnanaprakash/web_profiles" target="_blank" class="text-white"><i class="fab fa-xing"></i></a></li>
+                
+            <li class="mx-2"><a href="https://medium.com/@dasariselvam321" target="_blank" class="text-white"><i class="fab fa-medium"></i></a></li>
+                
+            <li class="mx-2"><a href="https://x.com/selvamdg"  target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                
+            <li class="mx-2"><a href="mailto:dasariselvam321@gmail.com"  class="text-white"><i class="fas fa-envelope"></i></a></li>
+                
+            <li class="mx-2"><a href="./contact.html" target="_blank" class="text-white"><i class="fas fa-address-book"></i></a></li>
+                    
+		</ul>
+         <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center align-item-center mt-3" >
+            <li class="mx-md-3 my-1">Copyright &copy; 2025</li>
+            <li class="mx-md-3 my-1">All rights reserved</li>
+            <li class="mx-md-3 my-1">Selvam Dasari</li>
+            <li class="mx-md-3 my-1"><a href="https://github.com/Selvam-DG" class="text-white">License</a></li>
+            
         </ul>
 
-    </div>
-   <div class="container mt-5">
-        <!-- Introduction -->
-        <div class="content" id="Introduction">
-            <h2><i class="fas fa-user"></i> Introduction</h2><hr>
-            <p>
-                Hi, I'm <strong>Selvam Dasari Gnanaprakash</strong>, a Master's student in Mechatronics at Technische Hochschule Rosenheim with a professional background in mechanical and data engineering.
-            </p>
-            <p>
-                With over 3 years of industrial experience and a strong academic foundation, I specialize in developing data-driven web tools, predictive analytics, and automation solutions. My transition from mechanical engineering to data science is powered by a passion for mathematics, statistics, and intelligent systems.
-            </p>
-            <p>
-                I'm especially interested in <strong>Advanced Mathematics, Statistics, Image Processing, Machine Learning</strong> and building practical AI solutions that enhance industrial workflows and business decision-making.
-            </p>
-
-        </div>
-        <!-- Experience -->
-        <div class="content"  id="experience"> 
-            <h2><i class="fas fa-briefcase"></i> Experience</h2><hr>
-            <ul>
-                <li>
-                <strong>Werkstudent – Data Engineering & Webentwicklung</strong><br>
-                <em>Fischerwerke GmbH & Co. KG, Germany | Mar 2025 – Sep 2025</em>
-                <ul>
-                    <li>Built internal web tools for R&D to manage and visualize data.</li>
-                    <li>Designed SQL Server schema and automated ingestion via Python.</li>
-                    <li>Performed data preprocessing with KNIME, Power BI, and Jupyter Notebook.</li>
-                    <li>Developed UI using Django, HTML, CSS, JS, and Django ORM.</li>
-                </ul>
-                </li>
-                <li>
-                <strong>Executive Mechanical Engineer</strong><br>
-                <em>MRF Tyres, India | Sep 2019 – Aug 2023</em>
-                <ul>
-                    <li>Analyzed MES/SAP data to optimize maintenance metrics (MTTR, MTBF).</li>
-                    <li>Automated downtime reports and improved scheduling with analytics.</li>
-                    <li>Handled inventory and machine commissioning (Siemens, Allen Bradley PLCs).</li>
-                </ul>
-                </li>
-            </ul>
-
-        </div>
-
-
-        
-       
-
-        <!-- Education -->
-        <div class="content" id="education"> 
-            <h2 ><i class="fas fa-graduation-cap"></i> Education</h2> <hr>
-            
-            <ul>
-                <li><strong>Master of Engineering Sciences (Mechatronics)</strong><br>
-                Technische Hochschule Rosenheim, Germany | Oct 2023 – Jul 2025<br>
-                <em>Grade: 1.5</em><br>
-                Subjects of Interest: Advanced Mathematics, Statistics, Image Processing, Machine Learning</li>
-                <br>
-                <li><strong>Bachelor of Mechanical Engineering</strong><br>
-                Pondicherry University, India | Aug 2015 – Apr 2019<br>
-                <em>Grade: 1.4</em></li>
-            </ul>
-            
-        </div>
-
-        <!-- Skills -->
-        <div class="content" id="skills"> 
-            <h2 ><i class="fas fa-tools"></i> Skills</h2><hr>
-            
-            <ul>
-                <li><strong>Programming:</strong> Python, C, C++, SQL, HTML, CSS, JavaScript</li>
-                <li><strong>Frameworks:</strong> Django, TensorFlow, PyTorch, Keras, OpenCV</li>
-                <li><strong>Tools:</strong> GitHub, Power BI, Tableau, Jupyter Notebook, SSMS</li>
-                <li><strong>Data Engineering:</strong> SQL Server, PostgreSQL, KNIME</li>
-                <li><strong>Automation & Simulation:</strong> MATLAB, Simulink, Siemens TIA Portal</li>
-            </ul>
-            
-        </div>
-
-        <!-- Certifications -->
-        <div class="content" id="certificates"> 
-            <h2><i class="fas fa-certificate"></i> Certifications</h2><hr>
-            
-            <ul>
-                <li>Data Science and AI Certification – IBM | Mar 2024</li>
-                <li>Machine Learning for Engineers – FAU Erlangen | Aug 2023</li>
-                <li>Complete Data Science Bootcamp – Udemy | Feb 2024</li>
-                <li>SQL & PostgreSQL – Udemy | Mar 2023</li>
-            </ul>
-            
-        </div>
-
-        <!-- Projects -->
-        <div class="content" id="projects"> 
-            <h2 ><i class="fas fa-project-diagram"></i> Projects</h2><hr>
-            
-            <ul>
-                <li><strong>Stereo Camera System for Part Localization</strong> – TH Rosenheim<br>
-                Stereo vision system for robot bin-picking with depth mapping via OpenCV.</li>
-                <li><strong>Telecom Churn Prediction</strong> – IBM Learnbay<br>
-                Built ML model to predict churn and suggest customer retention strategies.</li>
-                <li><strong>Car Price Prediction</strong> – IBM Learnbay<br>
-                Developed regression model using historical car data to estimate fair prices.</li>
-            </ul>
-            
-        </div>
-
-        <!-- Languages -->
-        <div class="content" id="languages"> 
-            <h4 class="card-title"><i class="fas fa-language"></i> Languages</h4><hr>
-            <div class="card-body">
-            Tamil (Native), Telugu (C2), Hindi (C1), English (C1), German (B2)
-            </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="contet" id="contact"> 
-            <h2 ><i class="fas fa-address-card"></i> Contact</h4><hr>
-            
-            Email: <a href="mailto:dasariselvam321@gmail.com">dasariselvam321@gmail.com</a><br>
-            Phone: +49 157 7363 3099<br>
-            Location: 72160 Horb am Neckar, Deutschland<br>
-            LinkedIn | GitHub | Portfolio | Xing
-            
-        </div>
-
-</div>
-
-    
-
-    
+    </footer>
 </body>
 </html>

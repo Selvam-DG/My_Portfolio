@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+     <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="custompage">
+    <header id="header" >
+        <nav class="navbar navbar-expand-lg navbar-dark p-md-3 ms-md-5 py-3  text-white" >
+            <div class="container-fluid">
+                <h3 class="navbar-brand"> <a href="../index.html" class="text-white text-decoration-none">Selvam Dasari</a>  </h3>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"  aria-label="Toggle navigation"   >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Sidebar Navigation Menu -->
+                <div class="collapse navbar-collapse justify-content-end mt-3" id="navbarContent" >
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link text-white  " role="button" data-bs-toggle ="dropdown" href="#" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-white " href="./eda.html">Exploratory Data Analysis</a></li>
+                            <li><a class="dropdown-item text-white " href="./machine_learning.html">Machine Learning</a></li>
+                            <li><a class="dropdown-item text-white " href="./django_projects.html">Django Projects</a></li>
+                            <li><a class="dropdown-item text-white " href="./nodejs_projects.html">Node.js Projects</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="main">
+        <div class="container my-5">
+            <h2 class="text-white mb-4">Machine Learning Projects</h2>
+            <div class="row">
+                
+                <!-- Project 1 -->
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card-sm text-white">
+                        <div class="card-img-top project-card-img" style="background-image: url('../static/images/loan-approval.jpg');"></div>
+                        <div class="card-body bg-dark rounded-bottom">
+                        <h5 class="card-title">Titanic Survival Prediction</h5>
+                        <p class="card-text small">
+                              Built a classification model to predict survival of passengers on the Titanic using logistic regression, decision trees, and ensemble methods. Focused on feature engineering and model evaluation.
+                        </p>
+                        <a href="https://www.kaggle.com/code/dgselvam/titanic-dataset" class="btn btn-sm btn-outline-light" target="_blank">View on Kaggle</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow project-card-sm text-white">
+                    <div class="card-img-top project-card-img" style="background-image: url('../static/images/churn-prediction.jpg');"></div>
+                    <div class="card-body bg-dark rounded-bottom">
+                    <h5 class="card-title">Telecom Churn Prediction</h5>
+                    <p class="card-text small">
+                        Built an ML classification model on Kaggle to predict customer churn using logistic regression, decision trees, and XGBoost.
+                    </p>
+                    <a href="https://www.kaggle.com/your-kaggle-link" class="btn btn-sm btn-outline-light" target="_blank">View Project</a>
+                    </div>
+                </div>
+                </div>
+                <!-- Project 2 -->
+                
+                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow project-card-sm text-white">
+                    <div class="card-img-top project-card-img" style="background-image: url('../static/images/house-price.jpg');"></div>
+                    <div class="card-body bg-dark rounded-bottom">
+                    <h5 class="card-title">House Price Prediction</h5>
+                    <p class="card-text small">
+                        Used regression techniques to predict house prices from a Kaggle dataset. Achieved RMSE of 0.13 using Random Forest & Lasso.
+                    </p>
+                    <a href="https://www.kaggle.com/your-kaggle-link2" class="btn btn-sm btn-outline-light" target="_blank">View Project</a>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow project-card-sm text-white">
+                    <div class="card-img-top project-card-img" style="background-image: url('../static/images/loan-approval.jpg');"></div>
+                    <div class="card-body bg-dark rounded-bottom">
+                    <h5 class="card-title">Loan Approval Prediction</h5>
+                    <p class="card-text small">
+                        A supervised learning project predicting loan eligibility based on applicant data. Implemented logistic regression and SVM.
+                    </p>
+                    <a href="https://github.com/Selvam-DG/loan-approval-ml" class="btn btn-sm btn-outline-light" target="_blank">GitHub</a>
+                    </div>
+                </div>
+                </div>
+                
+
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer id="footer" class="bg-dark text-white text-center mt-md-5 py-4">
+        <h3 style ="color:white;">Connect with Me</h3>
+
+        <ul class="d-flex flex-wrap justify-content-center list-unstyled" id="social-icons">
+            <li class="mx-2"> <a href="https://www.linkedin.com/in/selvamdasari55/" target="_blank" class="text-white"><i class="fab fa-linkedin"></i> </a>    </li>
+            <li class="mx-2"> <a href="https://github.com/Selvam-DG" target="_blank" class="text-white"><i class="fab fa-github"></i>
+                
+            <li class="mx-2"> <a href="https://www.kaggle.com/dgselvam" target="_blank" class="text-white"><i class="fab fa-kaggle"></i></a></li>
+            <li class="mx-2"><a href="https://www.xing.com/profile/Selvam_DasariGnanaprakash/web_profiles" target="_blank" class="text-white"><i class="fab fa-xing"></i></a></li>
+                
+            <li class="mx-2"><a href="https://medium.com/@dasariselvam321" target="_blank" class="text-white"><i class="fab fa-medium"></i></a></li>
+                
+            <li class="mx-2"><a href="https://x.com/selvamdg"  target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                
+            <li class="mx-2"><a href="mailto:dasariselvam321@gmail.com"  class="text-white"><i class="fas fa-envelope"></i></a></li>
+                
+            <li class="mx-2"><a href="./contact.html" target="_blank" class="text-white"><i class="fas fa-address-book"></i></a></li>
+                    
+		</ul>
+         <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center align-item-center mt-3" >
+            <li class="mx-md-3 my-1">Copyright &copy; 2025</li>
+            <li class="mx-md-3 my-1">All rights reserved</li>
+            <li class="mx-md-3 my-1">Selvam Dasari</li>
+            <li class="mx-md-3 my-1"><a href="https://github.com/Selvam-DG" class="text-white">License</a></li>
+            
+        </ul>
+
+    </footer>
+    
+</body>
+</html>

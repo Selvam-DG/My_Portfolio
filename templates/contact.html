@@ -8,64 +8,146 @@
     <link rel="stylesheet" href="../static/css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" >
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" ></script>
-</head>
-<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <div class="container-xxl mt-4 p-3" >
-        <div class="row">   
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card p-3 ">
-                   <h1 class="card-title">Contact</h1>
-                    <div class="card-body">
-                        
-                        <dl>
-                            <dt>Email:</dt>
-                            <dd>dasariselvam321@gmail</dd>
-                            <dt> Phone:</dt>
-                            <dd> +49 15773633099</dd>
-                            <dt>Linkedin:</dt>
-                            <dd>linkedin.com/in/selvamdasari55</dd>
-                        </dl>
-                    </div>
+</head>
+<body id = "custompage">
+    <header id="header" >
+        <nav class="navbar navbar-expand-lg navbar-dark p-md-3 ms-md-5 py-3  text-white" >
+            <div class="container-fluid">
+                <h3 class="navbar-brand"> <a href="../index.html" class="text-white text-decoration-none">Selvam Dasari</a>  </h3>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"  aria-label="Toggle navigation"   >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Sidebar Navigation Menu -->
+                <div class="collapse navbar-collapse justify-content-end mt-3" id="navbarContent" >
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./about.html">About</a></li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link text-white  " role="button" data-bs-toggle ="dropdown" href="#" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-white " href="./eda.html">Exploratory Data Analysis</a></li>
+                            <li><a class="dropdown-item text-white " href="./machine_learning.html">Machine Learning</a></li>
+                            <li><a class="dropdown-item text-white " href="./django_projects.html">Django Projects</a></li>
+                            <li><a class="dropdown-item text-white " href="./nodejs_projects.html">Node.js Projects</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                 <div class="card p-3 ">
-                    <h1 class="card-title">Address</h1>
-                    <div class="card-body">
-                        <div class="card-body">
-                            <dl> 
-                                <dt>Current Address:</dt>
-                                <dd>
-                                    Neckar Straße 36,<br>
-                                    72160 Horb am Neckar,<br>
-                                    Deutschland
-                                </dd>
-                                
-                                <dt>Permanent Address:</dt>
-                                <dd>
-                                    Westerndorfer Straße 47K,<br>
-                                    83024- Rosenheim, <br>
-                                    Deutschland.
-                                </dd>
-                                <dt>Home Address:</dt>
-                                <dd>
-                                    Chithrangi Kota Street, 1-190-16/B,<br>
-                                    Naryanavanam - 517581, <br>
-                                    Andhrapradesh India.
-                                </dd> 
-                            </dl>
-                        </div>
+        </nav>
+    </header>
+ 
+    
+    <main class="container-fluid mt-4  text-white" >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card-body p-3 ">
+                        <h1 class="card-title">Contact</h1> <hr> 
+                        <dl class="row mt-3">
+                            <dt class="col-md-3">Email:</dt>
+                            <dd class="col-md-9"><a href="mailto:dasariselvam321@gmail.com" class="text-white">dasariselvam321@gmail</a></dd>
+                            <dt class="col-md-3"> Phone:</dt>
+                            <dd class="col-md-9"> +49 157 736 33099</dd>
+                            <dt class="col-md-3">Linkedin:</dt>
+                            <dd class="col-md-9"><a href="https://www.linkedin.com/in/selvamdasari55/"class=text-white>www.linkedin.com/in/selvamdasari55</a></dd>
+                        </dl>
+                    </div> 
+                        
+                    
+                    <div class="card-body p-3">
+                        <h1 class="card-title">Address</h1><hr>
+                        <dl class="row mt-3"> 
+                            <dt class="col-md-4">Current Address:</dt>
+                            <dd class="col-md-6">
+                                Neckar Straße 36,<br>
+                                72160 Horb am Neckar,<br>
+                                Deutschland
+                            </dd>
+                            
+                            <dt class="col-md-4">Permanent Address:</dt>
+                            <dd class="col-md-6">
+                                Westerndorfer Straße 47K,<br>
+                                83024- Rosenheim, <br>
+                                Deutschland.
+                            </dd>
+                            <dt class="col-md-4">Home Address:</dt>
+                            <dd class="col-md-6">
+                                Chithrangi Kota Street, 1-190-16/B,<br>
+                                Naryanavanam - 517581, <br>
+                                Andhrapradesh India.
+                            </dd> 
+                        </dl>
+                            
                     </div>
+                        
+                </div>
+                <div class="col-md-6">
+                    <div class="card-body p-3  rounded">
+                        <h2 class="card-title text-center">Send a Message</h2><hr>
+                        <form>
+                            <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                            </div>
+                            <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Write your message here" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
+                        </div>
+
+                  
                 </div>
             </div>
         </div>
-
-            
-       
         
-       
-    </div>
+
+   
+    </main>
+
+    <footer id="footer" class="bg-dark text-white text-center mt-md-5 py-4">
+        <h3 style ="color:white;">Connect with Me</h3>
+
+        <ul class="d-flex flex-wrap justify-content-center list-unstyled" id="social-icons">
+            <li class="mx-2"> <a href="https://www.linkedin.com/in/selvamdasari55/" target="_blank" class="text-white"><i class="fab fa-linkedin"></i> </a>    </li>
+            <li class="mx-2"> <a href="https://github.com/Selvam-DG" target="_blank" class="text-white"><i class="fab fa-github"></i>
+                
+            <li class="mx-2"> <a href="https://www.kaggle.com/dgselvam" target="_blank" class="text-white"><i class="fab fa-kaggle"></i></a></li>
+            <li class="mx-2"><a href="https://www.xing.com/profile/Selvam_DasariGnanaprakash/web_profiles" target="_blank" class="text-white"><i class="fab fa-xing"></i></a></li>
+                
+            <li class="mx-2"><a href="https://medium.com/@dasariselvam321" target="_blank" class="text-white"><i class="fab fa-medium"></i></a></li>
+                
+            <li class="mx-2"><a href="https://x.com/selvamdg"  target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                
+            <li class="mx-2"><a href="mailto:dasariselvam321@gmail.com"  class="text-white"><i class="fas fa-envelope"></i></a></li>
+                
+            <li class="mx-2"><a href="./contact.html" target="_blank" class="text-white"><i class="fas fa-address-book"></i></a></li>
+                    
+		</ul>
+         <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center align-item-center mt-3" >
+            <li class="mx-md-3 my-1">Copyright &copy; 2025</li>
+            <li class="mx-md-3 my-1">All rights reserved</li>
+            <li class="mx-md-3 my-1">Selvam Dasari</li>
+            <li class="mx-md-3 my-1"><a href="https://github.com/Selvam-DG" class="text-white">License</a></li>
+            
+        </ul>
+
+    </footer>
 
 </body>
 </html>

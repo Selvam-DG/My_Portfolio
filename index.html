@@ -14,113 +14,72 @@
 </head>
 <body id="homepage">
   
-    <header id="header">
-        <div class="logo">
-            <h1>
-            <a href="./index.html">Selvam Dasari</a>
-            </h1>
-        </div>
-
-        <div class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid justify-content-start mt-3 p-3">
-
-            <!-- Toggle Button -->
-            <button class="navbar-toggler d-lg-none"  type="button"   id="menuToggleBtn"  aria-label="Toggle navigation"   >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Sidebar Navigation Menu -->
-            <nav id="navbarContent" class="sidebar">
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./templates/about.html">About</a></li>
-                    <li class="dropdown">
-                        <a href="#">Portfolio</a>
-                        <ul class="dropdown-content">
-                        <li><a href="#">Exploratory Data Analysis</a></li>
-                        <li><a href="#">Machine Learning</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="./templates/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-
+    <header id="header" >
+        <nav class="navbar navbar-expand-lg navbar-dark p-md-3 ms-md-5 py-3  text-white" >
+            <div class="container-fluid">
+                <h3 class="navbar-brand"> <a href="./index.html" class="text-white text-decoration-none">Selvam Dasari</a>  </h3>
+                <!-- Toggle Button -->
+                <button class="navbar-toggler "  type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"  aria-label="Toggle navigation"   >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Sidebar Navigation Menu -->
+                <div class="collapse navbar-collapse justify-content-end mt-3" id="navbarContent" >
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./templates/about.html">About</a></li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link text-white  " role="button" data-bs-toggle ="dropdown" href="#" aria-expanded="false">Portfolio</a>
+                            <ul class="dropdown-menu bg-dark">
+                            <li><a class="dropdown-item text-white " href="./templates/eda.html">Exploratory Data Analysis</a></li>
+                            <li><a class="dropdown-item text-white " href="./templates/machine_learning.html">Machine Learning</a></li>
+                            <li><a class="dropdown-item text-white " href="./templates/django_projects.html">Django Projects</a></li>
+                            <li><a class="dropdown-item text-white " href="./templates/nodejs_projects.html">Node.js Projects</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./templates/blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="./templates/contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-</header>
-
-
-    
+        </nav>
+    </header>
  
+    <main id="flex" class="container d-flex flex-column flex-md-row align-items-center text-center text-md-start py-5 mt-md-5">
 
-    
-   
-    <div id="flex">
-        <div class="content">
-
-            <header>
-                <h2>SELVAM DASARI GNANAPRAKASH</h2>
-                <p>Data Scientist || Software Engineer</p>
-            </header>
-            <div class="image">
-                <img src="./static/images/my_photo.jpg" alt="Photo of Selvam Dasari">
-            </div>
+        <div class="content col-md-6 ms-5 me-4">
+            <h2>SELVAM DASARI GNANAPRAKASH</h2>
+            <p>Data Scientist || Software Engineer</p>
+        </div>
+        <div class="image col-md-6 mt-4 mt-md-0">
+            <img src="./static/images/my_photo.jpg" alt="Photo of Selvam Dasari" class ="img-fluid rounded-circle" style="max-width:250px;">
         </div>
         
-    </div>
+    </main>
 
-    <footer id="footer">
-        
+    <footer id="footer" class="bg-dark text-white text-center mt-md-5 py-4">
         <h3 style ="color:white;">Connect with Me</h3>
-        
-        <ul class="icons" id="social-icons">
-            <li>
-                <a href="https://www.linkedin.com/in/selvamdasari55/" target="_blank" class="icon brands fa-linkedin">
-                    <span class="label">linkedin</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/Selvam-DG" target="_blank" class="icon brands fa-github">
-                    <span class="label">Github</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.kaggle.com/dgselvam" target="_blank" class="icon brands fa-kaggle">
-                    <span class="label">Kaggle</span>
-                </a>
-            </li> 
-            <li>
-                <a href="https://www.xing.com/profile/Selvam_DasariGnanaprakash/web_profiles" target="_blank" class="icon brands fa-xing">
-                    <span class="label">Xing</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://medium.com/@dasariselvam321" target="_blank" class="icon brands fa-medium">
-                    <span class="label">Medium</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://x.com/selvamdg"  target="_blank" class="icon brands fa-twitter">
-                    <span class="label">Twitter</span>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:dasariselvam321@gmail.com"  class="icon solid fa-envelope">
-                    <span class="label">Email Me</span>
-                </a>
-            </li>
-            <li>
-                <a href="./templates/contact.html" target="_blank" class="icon fa-solid fa-address-book">
-                    <span class="label">Contact</span>                           
-                </a>
-            </li>
+
+        <ul class="d-flex flex-wrap justify-content-center list-unstyled" id="social-icons">
+            <li class="mx-2"> <a href="https://www.linkedin.com/in/selvamdasari55/" target="_blank" class="text-white"><i class="fab fa-linkedin"></i> </a>    </li>
+            <li class="mx-2"> <a href="https://github.com/Selvam-DG" target="_blank" class="text-white"><i class="fab fa-github"></i>
+                
+            <li class="mx-2"> <a href="https://www.kaggle.com/dgselvam" target="_blank" class="text-white"><i class="fab fa-kaggle"></i></a></li>
+            <li class="mx-2"><a href="https://www.xing.com/profile/Selvam_DasariGnanaprakash/web_profiles" target="_blank" class="text-white"><i class="fab fa-xing"></i></a></li>
+                
+            <li class="mx-2"><a href="https://medium.com/@dasariselvam321" target="_blank" class="text-white"><i class="fab fa-medium"></i></a></li>
+                
+            <li class="mx-2"><a href="https://x.com/selvamdg"  target="_blank" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                
+            <li class="mx-2"><a href="mailto:dasariselvam321@gmail.com"  class="text-white"><i class="fas fa-envelope"></i></a></li>
+                
+            <li class="mx-2"><a href="./templates/contact.html" target="_blank" class="text-white"><i class="fas fa-address-book"></i></a></li>
+                    
 		</ul>
-        <ul class="copyright">
-            <li>Copyright &copy; 2025</li>
-            <li>All rights reserved</li>
-            <li>Selvam Dasari</li>
-            <li><a href="https://github.com/Selvam-DG">License</a></li>
+        <ul class="list-unstyled d-flex flex-column flex-md-row justify-content-center align-item-center mt-3" >
+            <li class="mx-md-3 my-1">Copyright &copy; 2025</li>
+            <li class="mx-md-3 my-1">All rights reserved</li>
+            <li class="mx-md-3 my-1">Selvam Dasari</li>
+            <li class="mx-md-3 my-1"><a href="https://github.com/Selvam-DG" class="text-white">License</a></li>
             
         </ul>
 
@@ -128,24 +87,7 @@
 
     
 
-    
-    <!-- Sidebar Toggle Script -->
-<script>
-  const menuToggleBtn = document.getElementById('menuToggleBtn');
-  const navbarContent = document.getElementById('navbarContent');
-  menuToggleBtn.addEventListener('click', () => {
-    const isActive = navbarContent.classList.toggle('active'); // Toggle sidebar
 
-    // Change icon: hamburger <-> X
-    if (isActive) {
-        // Show close (X) icon
-        menuToggleBtn.innerHTML = '<i class="fas fa-times" style="font-size: 1.5em; color: white;"></i>';
-    } else {
-        // Show hamburger icon
-        menuToggleBtn.innerHTML = '<span class="navbar-toggler-icon"></span>';
-    }
-});
-</script>
 
 
     
