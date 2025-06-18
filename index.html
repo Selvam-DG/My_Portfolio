@@ -9,51 +9,51 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" ></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./static/css/styles.css">
-    <!-- Font Awesome CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
     
 </head>
 <body id="homepage">
   
     <header id="header">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <h1>
-                        <a href="./index.html">Selvam Dasari</a>
-                    </h1>
-                </div>
-                <nav class="navbar navbar-expand-lg navbar-dark">
-            
-                    <div class="container-fluid justify-content-end">
-                        <!-- toggle button -->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                            aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <!-- Navabr control -->
-                        <div class="collapse navbar-collapse" id="navbarContent">
-                            <ul >
-                                <li ><a href="./index.html" >Home</a> </li>
-                                <li ><a href="./templates/about.html" >About</a> </li>
-                                <li class="dropdown">
-                                    <a href="#" >Portfolio</a>
-                                    <ul class="dropdown-content">
-                                        <li><a href="#">Exploratory Data Analysis</a></li>
-                                        <li><a href="#">Machine Learning</a></li>
-                                    </ul>
-                                </li>
+        <div class="logo">
+            <h1>
+            <a href="./index.html">Selvam Dasari</a>
+            </h1>
+        </div>
 
-                                <li ><a href="#" >Blog</a> </li>
-                                <li ><a href="./templates/contact.html" >contact</a> </li>
-                        
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+        <div class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid justify-content-start mt-3 p-3">
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler d-lg-none"  type="button"   id="menuToggleBtn"  aria-label="Toggle navigation"   >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Sidebar Navigation Menu -->
+            <nav id="navbarContent" class="sidebar">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./templates/about.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#">Portfolio</a>
+                        <ul class="dropdown-content">
+                        <li><a href="#">Exploratory Data Analysis</a></li>
+                        <li><a href="#">Machine Learning</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="./templates/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
             </div>
-        </div>        
-    </header>
+        </div>
+</header>
+
+
+    
+ 
+
     
    
     <div id="flex">
@@ -64,7 +64,7 @@
                 <p>Data Scientist || Software Engineer</p>
             </header>
             <div class="image">
-                <img src="./static/images/my_photo.jpg" alt="">
+                <img src="./static/images/my_photo.jpg" alt="Photo of Selvam Dasari">
             </div>
         </div>
         
@@ -76,37 +76,42 @@
         
         <ul class="icons" id="social-icons">
             <li>
-                <a href="#" target="_blank" class="icon brands fa-linkedin">
+                <a href="https://www.linkedin.com/in/selvamdasari55/" target="_blank" class="icon brands fa-linkedin">
                     <span class="label">linkedin</span>
                 </a>
             </li>
             <li>
-                <a href="#" target="_blank" class="icon brands fa-github">
+                <a href="https://github.com/Selvam-DG" target="_blank" class="icon brands fa-github">
                     <span class="label">Github</span>
                 </a>
             </li>
             <li>
-                <a href="#" target="_blank" class="icon brands fa-kaggle">
+                <a href="https://www.kaggle.com/dgselvam" target="_blank" class="icon brands fa-kaggle">
                     <span class="label">Kaggle</span>
                 </a>
             </li> 
             <li>
-                <a href="#" target="_blank" class="icon brands fa-medium">
+                <a href="https://www.xing.com/profile/Selvam_DasariGnanaprakash/web_profiles" target="_blank" class="icon brands fa-xing">
+                    <span class="label">Xing</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://medium.com/@dasariselvam321" target="_blank" class="icon brands fa-medium">
                     <span class="label">Medium</span>
                 </a>
             </li>
             <li>
-                <a href="#"  target="_blank" class="icon brands fa-twitter">
+                <a href="https://x.com/selvamdg"  target="_blank" class="icon brands fa-twitter">
                     <span class="label">Twitter</span>
                 </a>
             </li>
             <li>
-                <a href="#" target="_blank" class="icon solid fa-envelope">
-                    <span class="label">Email</span>
+                <a href="mailto:dasariselvam321@gmail.com"  class="icon solid fa-envelope">
+                    <span class="label">Email Me</span>
                 </a>
             </li>
             <li>
-                <a href="#" target="_blank" class="icon solid fa-solid fa-address-book">
+                <a href="./templates/contact.html" target="_blank" class="icon fa-solid fa-address-book">
                     <span class="label">Contact</span>                           
                 </a>
             </li>
@@ -124,7 +129,24 @@
     
 
     
-    
+    <!-- Sidebar Toggle Script -->
+<script>
+  const menuToggleBtn = document.getElementById('menuToggleBtn');
+  const navbarContent = document.getElementById('navbarContent');
+  menuToggleBtn.addEventListener('click', () => {
+    const isActive = navbarContent.classList.toggle('active'); // Toggle sidebar
+
+    // Change icon: hamburger <-> X
+    if (isActive) {
+        // Show close (X) icon
+        menuToggleBtn.innerHTML = '<i class="fas fa-times" style="font-size: 1.5em; color: white;"></i>';
+    } else {
+        // Show hamburger icon
+        menuToggleBtn.innerHTML = '<span class="navbar-toggler-icon"></span>';
+    }
+});
+</script>
+
 
     
 </body>
