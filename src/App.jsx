@@ -7,6 +7,7 @@ import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
 import NodeProjects from './Pages/NodeProject';
 import DjangoProject from './Pages/DjangoProject';
+import Skills from './Pages/Skills';
 
 
 import { useState } from 'react'
@@ -25,6 +26,7 @@ function App() {
           <Route path='/about' element={ <About/>} />
           <Route path='/blog' element={ <Blog/>} />
           <Route path='/contact' element={ <Contact/>} />
+          <Route path='/skills' element={ <Skills/>} />
           <Route path='/projects/Django' element={ <DjangoProject/>} />
           <Route path='/projects/Nodejs' element={ <NodeProjects/>} />
         </Routes>

@@ -46,6 +46,7 @@ export default function Navbar(){
                         )}
 
                     </li>
+                    <li><Link to='/skills' className="hover:text-indigo-400">Skills</Link></li>
                     <li><Link to='/blog' className="hover:text-indigo-400">Blog</Link></li>
                     <li><Link to='/contact' className="hover:text-indigo-400">Contact</Link></li>
                 </ul>
@@ -70,6 +71,7 @@ export default function Navbar(){
                             </div>
                         </div>
                     </li>
+                    <li><Link to='/skills' className="block py-2">Skills</Link></li>
                     <li><Link to='/blog' className="block py-2">Blog</Link></li>
                     <li><Link to='/contact' className="block py-2">Contact</Link></li>
 
