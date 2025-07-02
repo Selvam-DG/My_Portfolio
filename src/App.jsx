@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import About from './Pages/About';
 import Blog from './Pages/Blog';
 import Contact from './Pages/Contact';
-import NodeProjects from './Pages/NodeProject';
+import NodeProject from './Pages/NodeProject';
 import DjangoProject from './Pages/DjangoProject';
 import Skills from './Pages/Skills';
 
@@ -28,7 +28,7 @@ function App() {
           <Route path='/contact' element={ <Contact/>} />
           <Route path='/skills' element={ <Skills/>} />
           <Route path='/projects/Django' element={ <DjangoProject/>} />
-          <Route path='/projects/Nodejs' element={ <NodeProjects/>} />
+          <Route path='/projects/Nodejs' element={ <NodeProject/>} />
         </Routes>
 
       </main>
