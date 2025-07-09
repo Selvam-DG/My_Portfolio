@@ -38,16 +38,16 @@ export default function Navbar(){
                         {dropdownOpen && (
                               
                             <div className="absolute left-0 mt-2 bg-cyan-800 rounded shadow-lg w-65">
-                                <Link to='/projects/django' className="block text-white px-4 py-1 hover:bg-gray-700">Django Projects</Link>
-                                <Link to='/projects/nodejs' className="block text-white px-4 py-1 hover:bg-gray-700">Node.js Projects</Link>
-                                <Link to='/' className="block text-white px-4 py-1 hover:bg-gray-700">EXploratory Data Analaytics</Link>
-                                <Link to='/' className="block text-white px-4 py-1 hover:bg-gray-700">Django Projects</Link>
+                                <Link to='/projects#full-stack-apps' className="block text-white px-4 py-1 hover:bg-gray-700">Full-Stack Applications</Link>
+                                <Link to='/projects#frontend' className="block text-white px-4 py-1 hover:bg-gray-700">Frontend Projects</Link>
+                                <Link to='/projects#ds-ml' className="block text-white px-4 py-1 hover:bg-gray-700">Data Science & ML</Link>
+                                <Link to='/projects#api-backend' className="block text-white px-4 py-1 hover:bg-gray-700">API & Backend Services</Link>
+                                <Link to='/projects#mini-project' className="block text-white px-4 py-1 hover:bg-gray-700">Mini Projects & Experiments</Link>
                             </div>
                         )}
 
                     </li>
                     <li><Link to='/skills' className="hover:text-indigo-400">Skills</Link></li>
-                    <li><Link to='/blog' className="hover:text-indigo-400">Blog</Link></li>
                     <li><Link to='/contact' className="hover:text-indigo-400">Contact</Link></li>
                 </ul>
             </div>
@@ -63,10 +63,11 @@ export default function Navbar(){
                         <div className="group">
                             <section className="cursor-pointer py-2">Projects</section>
                             <div className="pl-4 text-md">
-                                <Link to='/projects/django' className="block py-1">Django Projects</Link>
-                                <Link to='/projects/nodejs' className="block py-1">Node.js Projects</Link>
-                                <Link to='/' className="block py-1">EXploratory Data Analaytics</Link>
-                                <Link to='/' className="block py-1">Django Projects</Link>
+                                <Link to='/projects#full-stack-apps' className="block py-1">Full-Stack Applications</Link>
+                                <Link to='/projects#frontend' className="block py-1">Frontend Projects</Link>
+                                <Link to='/projects#ds-ml' className="block py-1">Data Science & ML</Link>
+                                <Link to='/projects#api-backend' className="block py-1">API & Backend Services</Link>
+                                <Link to='/projects#mini' className="block py-1">Mini Projects & Experiments</Link>
 
                             </div>
                         </div>

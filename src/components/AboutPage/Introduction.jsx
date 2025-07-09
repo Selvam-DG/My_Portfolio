@@ -1,11 +1,11 @@
 export default function Introduction() {
     return (
-        <section id="introduction" className="prose max-w-none scroll-mt-24 text-white shadow-md shadow-gray-900 rounded-lg p-5">
-            <h2 className="text-2xl font-bold mb-4 flex items-center space-x-2">
-                <i className="fas fa-user "></i>
+        <section id="introduction" className="bg-white shadow-lg rounded-xl p-8 space-y-4 scroll-mt-24 border border-gray-200">
+            <h2 className="text-3xl font-semibold text-blue-900 flex items-center gap-2">
+                <i className="fas fa-user text-blue-700 "></i>
                 <span>About Me</span>
             </h2>
-            <hr className="mb-6 border-gray-300" />
+            <hr className="border-gray-300" />
             <p className="mb-2" >
                 🎓 I’m a passionate Master’s student in Engineering Sciences (Mechatronics) at Technische Hochschule Rosenheim, driven by a strong interest in bridging intelligent software with real-world systems. My academic journey has equipped me with a solid foundation in machine learning, computer vision, image processing, and data science — and I’m now expanding that with real-world software development experience.
             </p>

@@ -2,6 +2,7 @@ const experiences = [
     {
         title: "Software Engineer Intern - Digital Twin",
         company : "fischer group, Waldachtal, Germany",
+        period: 'Mar 2025 - Sept 2025',
         type : "Internship",
         location: "On-Site",
         tasks : [
@@ -24,24 +25,34 @@ const experiences = [
             "Applied Lean principles to reduce machine downtime and improve OEE.",
         ],
     },
+    {
+        title: 'Intern',
+        company : 'Indian Institute of Science (IISc), Bengaluru, India',
+        period: 'May 2018 – Aug 2018 ',
+        type :'Internship',
+        location : 'On-Site',
+        tasks: [
+            'Gained hands-on experience in applied research and engineering data analysis.'
+        ]
+    },
 ]
 
 export default function Experience() {
     return (
-        <section id="experience" className="space-y-8 scroll-mt-24"> 
-            <h2 className="text-2xl font-bold mb-4 flex items-center space-x-2  text-white">
-                <i className="fas fa-briefcase"></i>
+        <section id="experience" className="space-y-2 scroll-mt-24"> 
+            <h2 className="text-3xl font-semibold text-blue-900 flex items-center gap-2">
+                <i className="fas fa-briefcase text-blue-700"></i>
                 <span>Experience</span>
             </h2>
             <hr className="border-gray-300 mb-6"/>
             {experiences.map( (job, idx) => (
                 <article
                     key={idx}
-                    className="p-6 border-gray-200 rounded-lg shadow-sm shadow-gray-900 hover:shadow-lg transition-shadow  text-white"
+                    className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow"
                     >
-                    <h3 className="text-xl font-semibold">{job.title}</h3>
-                    <h4 className="text-md font-medium ">{job.company}</h4>
-                    <p className="text-sm  mb-2"> {job.period} | {job.type} | {job.location}</p>
+                    <h3 className="text-xl font-semibold text-gray-900">{job.title}</h3>
+                    <h4 className="text-md font-medium text-gray-700">{job.company}</h4>
+                    <p className="text-sm text-gray-500 mb-3"> {job.period} | {job.type} | {job.location}</p>
                     <ul className="list-disc list-inside space-y-1 ">
                         {job.tasks.map( (task, i) => (
                             <li key={i}>{task}</li>

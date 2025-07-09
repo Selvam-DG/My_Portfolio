@@ -11,7 +11,7 @@ export default function SectionNavButtons() {
 
     return (
 
-        <nav className="bg-blue-100 shadow-md sticky top-0 z-10">
+        <nav className="hidden bg-blue-100 shadow-md sticky top-0 z-10 md:block">
             <ul className="flex justify-center space-x-8 py-4 text-gray-800"> 
                 {section.map( ({id, label}) => (
                     <li key={id}>

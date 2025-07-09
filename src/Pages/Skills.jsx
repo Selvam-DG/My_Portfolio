@@ -1,5 +1,5 @@
 import { FaPython, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaDatabase } from "react-icons/fa";
-import { SiDjango, SiPostgresql, SiTensorflow, SiTableau, SiOpencv } from "react-icons/si";
+import { SiDjango, SiPostgresql, SiTensorflow, SiTableau, SiOpencv , SiReact} from "react-icons/si";
 
 const skills = [
   {
@@ -17,6 +17,7 @@ const skills = [
       { name: "Django", icon: <SiDjango className="text-green-700" /> },
       { name: "TensorFlow", icon: <SiTensorflow className="text-orange-500" /> },
       { name: "OpenCV", icon: <SiOpencv className="text-blue-300" /> },
+      { name: "React", icon: <SiReact className="text-blue-800" /> },
     ],
   },
   {
