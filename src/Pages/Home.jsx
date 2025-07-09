@@ -1,3 +1,5 @@
+// import myPhoto from '/images/my_phtot.jpg';
+
 export default function Home() {
     return (
         <div className="min-h-screen mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-right text-white bg-[url('/images/background1.jpg')] bg-cover  ">
@@ -6,7 +8,7 @@ export default function Home() {
             <p className="text-xl">Software Engineer || Data Scientist</p>
             </div>
             <div className="md:w-1/2 flex justify-center md:justify-start md:px-6 mt-4">
-                <img src="/images/my_photo.jpg" alt="Selvam Dasari Image" className="rounded-full w-45 h-45 md:w-64 md:h-64 object-cover" />
+                <img src="/My_Portfolio/images/my_photo.jpg" alt="Selvam Dasari Image" className="rounded-full w-45 h-45 md:w-64 md:h-64 object-cover" />
             </div>
 
         </div>

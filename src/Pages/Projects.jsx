@@ -10,7 +10,7 @@ import ProjectCard from "../components/ProjectCard";
         description:
         "A role-based project management platform for tracking projects and tasks across all employee in an organistaion.",
         stack: ['Django Restframework', "React",'REST API', 'SQLite'],
-        image: "public/images/project-management.jpg",
+        image: "/My_Portfolio/images/project-management.jpg",
         github: "https://github.com/Selvam-DG/Efficio",
         demo: null,
         category: 'Full-Stack Applications',
@@ -32,7 +32,7 @@ import ProjectCard from "../components/ProjectCard";
         description:
         "A blog application with a decoupled architecture using Django APIs, Supabase for backend services, and  a modern React frontend.",
         stack: ['Django Rest Framework', 'Supabase', 'React', 'PostgreSQL'],
-        image: "/images/blog.png",
+        image: "/My_Portfolio/images/blog.png",
         github: "https://github.com/Selvam-DG/Blog-DSRT",
         demo: 'https://blog-drp.vercel.app/',
         category : "API & Backend Services",
@@ -43,7 +43,7 @@ import ProjectCard from "../components/ProjectCard";
     description:
     "A weather visualization dashboard that fetches real-time weather data via OpenMeteo API and display it using responsive UI.",
     stack: [ 'React', 'Tailwind CSS', 'OpenMeteo API'],
-    image: "/images/weather_forecast.jpg",
+    image: "/My_Portfolio/images/weather_forecast.jpg",
     github: "https://github.com/Selvam-DG/Blog-DSRT",
     demo: 'https://blog-drp.vercel.app/',
     category : "Frontend Projects",

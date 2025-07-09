@@ -2,7 +2,7 @@ export default function ProjectCard({ project }) {
 
     return (
         <div className="bg-white rounded-xl shadow-md transition hover:shadow-xl ">
-            <div className="h-48 bg-cover bg-center rounded" style={{backgroundImage: `url(${project.image ||"public/images/smooth-dark-blue.jpg" })`}}></div>
+            <div className="h-48 bg-cover bg-center rounded" style={{backgroundImage: `url(${project.image ||"/My_Portfolio/images/smooth-dark-blue.jpg" })`}}></div>
             <div className="p-4">
                 <h3 className="text-xl font-bold mb-1"> {project.title}</h3>
                 <p className="text-sm text-gray-600 mb-2">{project.description}</p>

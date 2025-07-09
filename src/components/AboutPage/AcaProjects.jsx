@@ -30,10 +30,10 @@ export default function Projects(){
     ]
 
     const personalProjects = [
-        {title: 'Python-Django ', route: '/projects/Django '},
-        {title: 'Node.js', route: '/projects/Nodejs '},
-        {title: 'Exploratory Data Analysis', route: ' '},
-        {title: 'Machine Learning', route: ' '},
+        {title: 'Full-Stack Applications ', route: '/projects#full-stack-apps'},
+        {title: 'Frontend Projects', route: '/projects#frontend'},
+        {title: 'Data Science & ML Projects', route: '/projects#ds-ml'},
+        {title: 'API & Backend Projects', route: '/projects#api-backend'},
         
 
         
