@@ -1,5 +1,5 @@
 import { FaPython, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaDatabase } from "react-icons/fa";
-import { SiDjango, SiPostgresql, SiTensorflow, SiTableau, SiOpencv , SiReact} from "react-icons/si";
+import { SiDjango, SiPostgresql, SiTensorflow, SiTableau, SiOpencv , SiReact, SiKnime} from "react-icons/si";
 
 const skills = [
   {
@@ -34,6 +34,7 @@ const skills = [
       { name: "Tableau", icon: <SiTableau className="text-purple-400" /> },
       { name: "Power BI", icon: <span className="font-bold text-yellow-400">PBI</span> },
       { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-800" /> },
+      { name: "KNIME Analytice", icon: <SiKnime className="text-yellow-600" /> },
     ],
   },
   {

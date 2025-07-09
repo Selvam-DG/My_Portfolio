@@ -73,7 +73,6 @@ export default function Navbar(){
                         </div>
                     </li>
                     <li><Link to='/skills' className="block py-2">Skills</Link></li>
-                    <li><Link to='/blog' className="block py-2">Blog</Link></li>
                     <li><Link to='/contact' className="block py-2">Contact</Link></li>
 
                 </ul>

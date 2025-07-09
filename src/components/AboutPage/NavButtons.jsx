@@ -5,7 +5,7 @@ export default function SectionNavButtons() {
         {id:"experience" , label: "Experience"},
         {id:"projects" , label: "Projects"},
         {id:"education" , label: "Education"},
-        {id:"certificates" , label: "Certifications"},
+        {id:"certifications" , label: "Certifications"},
         
     ];
 
