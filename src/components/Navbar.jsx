@@ -37,7 +37,7 @@ export default function Navbar(){
                         <label className="hover:text-indigo-400">Projects</label>
                         {dropdownOpen && (
                               
-                            <div className="absolute left-0 mt-2 bg-cyan-800 rounded shadow-lg w-65">
+                            <div className="absolute left-0 mt-2 bg-cyan-800 rounded shadow-lg w-65 z-20">
                                 <Link to='/projects#full-stack-apps' className="block text-white px-4 py-1 hover:bg-gray-700">Full-Stack Applications</Link>
                                 <Link to='/projects#frontend' className="block text-white px-4 py-1 hover:bg-gray-700">Frontend Projects</Link>
                                 <Link to='/projects#ds-ml' className="block text-white px-4 py-1 hover:bg-gray-700">Data Science & ML</Link>

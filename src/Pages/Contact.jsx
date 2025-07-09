@@ -47,7 +47,7 @@ const addresses = [
 export default function Contact() {
   return (
     <main className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 ">
 
         {/* Contact & Address Info */}
         <div className="space-y-10">
