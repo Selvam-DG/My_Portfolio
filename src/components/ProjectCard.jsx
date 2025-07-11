@@ -14,6 +14,7 @@ export default function ProjectCard({ project }) {
                 <div className="flex gap-3">
                     {project.github && <a href={project.github} className=" px-4 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition">GitHub</a>}
                     {project.demo && <a href={project.demo} className="px-4 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition">Live Demo</a>}
+                     {project.kaggle_link && <a href={project.kaggle_link} className="px-4 py-1 bg-green-600 text-white text-sm rounded hover:bg-green-700 transition">Kaggle Link</a>}
                 </div>
             </div>
             
