@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -66,18 +67,45 @@ export default function Contact() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newErrors = validateForm();
     
     if (Object.keys(newErrors).length === 0) {
       setIsSubmitting(true);
-      setTimeout(() => {
+      
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            access_key: import.meta.env.VITE_WEB3_ACCESS_KEY,
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+            from_name: 'Portfolio Contact Form',
+            to_email: 'dasariselvam321@gmail.com'
+          })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          setIsSubmitting(false);
+          setSubmitSuccess(true);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+          setTimeout(() => setSubmitSuccess(false), 5000);
+        } else {
+          throw new Error('Failed to send email');
+        }
+      } catch (error) {
+        console.error('Error sending email:', error);
         setIsSubmitting(false);
-        setSubmitSuccess(true);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setTimeout(() => setSubmitSuccess(false), 5000);
-      }, 1500);
+        setErrors({ submit: 'Failed to send message. Please try again or email directly.' });
+      }
     } else {
       setErrors(newErrors);
     }
