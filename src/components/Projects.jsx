@@ -5,6 +5,36 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "LearnPulse",
+      description: "A micro-learning platform that provides quick, concise concept summaries across different subjects.",
+      stack: ["Flask API", "MongoDB","React-Vite", "JavaScript"],
+      category: "Full-Stack",
+      gradient: "from-indigo-500 to-blue-500",
+      github: "https://github.com/Selvam-DG/learnPulse",
+      demo: "https://60-sec-learning.vercel.app/",
+      icon: "fas fa-book"
+    },
+    {
+      title: "E-commerce API",
+      description: "A REST API for e-commerce operations built with Django REST framework and PostgreSQL",
+      stack: ["Django", "REST API","SDCL", "Postgres", "Authentication"],
+      category: "Backend",
+      gradient: "from-purple-500 to-green-500",
+      github: "https://github.com/Selvam-DG/ecommerce-api",
+      demo: null,
+      icon: "fas fa-shop"
+    },
+    {
+      title: "Learn Language",
+      description: "A vocabulary platform to search and learn a Language with practices or word for the days",
+      stack: ["Flask API", "Vite-ReactJs","TailwindCSS", "Postgres", "Docker", "Admin Authentication"],
+      category: "Full-Stack",
+      gradient: "from-blue-500 to-cyan-500",
+      github: "https://github.com/Selvam-DG/learn-german",
+      demo: "https://learndeutsch.selvam-dg.xyz",
+      icon: "fas fa-book-open"
+    },
+    {
       title: "Book Review Platform",
       description: "A Web application to view, post or update Review of the Books.",
       stack: ["Flask API", "React-TypeScript", "Postgres", "Kubernetes"],
@@ -33,6 +63,16 @@ export default function Projects() {
       github: "https://github.com/Selvam-DG/API-mastery",
       demo: null,
       icon: "fas fa-rss"
+    },
+     {
+      title: "E-commerce Frontend",
+      description: "Modern Frontend application for e-commerce platform built with React-Vite, TailwindCSS",
+      stack: ["JavaScript", "ReactJs-Vite","TailwindCSS", "ReactRouter", "Axios","JWT Authentication"],
+      category: "Frontend",
+      gradient: "from-green-500 to-purple-500",
+      github: "https://github.com/Selvam-DG/ecommerce-frontend",
+      demo: null,
+      icon: "fas fa-shop"
     },
     {
       title: "Efficio - Project Management",

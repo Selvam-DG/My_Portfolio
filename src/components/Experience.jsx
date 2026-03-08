@@ -1,7 +1,21 @@
 export default function Experience() {
   const experiences = [
     {
-      title: "Software Engineer Intern - Digital Twin",
+      title: "Python Developer &  Master Thesis Student ",
+      company: "Think3DDD GbR",
+      location: "Berlin, Germany",
+      period: "Oct 2025 - Mar 2026",
+      type: "Internship & Master Thesis",
+      icon: "🎓",
+      gradient: "from-green-500 to-cyan-500",
+      tasks: [
+        "Developed image preprocessing pipeline to optimize Photogrammetry 3D reconstruction",
+        "Built backend modules to receive orthopedic video data and orchestrate reconstruction workflow",
+        "Implemented WebSocket module for the reconstruction",
+      ]
+    },
+    {
+      title: "Software Engineer Intern ",
       company: "fischer group",
       location: "Waldachtal, Germany",
       period: "Mar 2025 - Sept 2025",
@@ -9,10 +23,10 @@ export default function Experience() {
       icon: "💼",
       gradient: "from-blue-500 to-cyan-500",
       tasks: [
-        "Designed and implemented structured SQL Server database using SSMS for organizational data",
-        "Applied data normalization principles to optimize data relationships and scalability",
-        "Developed Python scripts for automating data ingestion and processing",
-        "Built web application using Django (backend) and HTML, CSS, JavaScript (frontend)"
+        "Designed and implemented an MSSQL database schema, migrating 1M+ records ",
+        "Developed a web application using Django (backend) and HTML, CSS, JavaScript (frontend)",
+        "Integrated Microsoft Entra ID (Azure AD) for secure internal authentication and role-based access control.",
+        "Established CI/CD pipelines in Azure DevOps, fully automating build, test, and deployment workflows for continuous delivery."
       ]
     },
     {

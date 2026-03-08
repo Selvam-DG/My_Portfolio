@@ -122,6 +122,29 @@ h1, h2, h3, h4, h5, h6 {
   animation: float-icon 6s ease-in-out infinite;
 }
 
+@keyframes spin-orbit {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes counter-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(-360deg); }
+  }
+  .orbit-arm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-origin: center center;
+    animation: spin-orbit linear infinite;
+  }
+  .orbit-icon-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: counter-spin linear infinite;
+  }
+
 /* Typing Cursor */
 @keyframes blink {
   0%, 100% { opacity: 1; }

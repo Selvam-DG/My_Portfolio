@@ -27,10 +27,10 @@ export default function Skills() {
       icon: "💻",
       gradient: "from-blue-500 to-cyan-500",
       skills: [
-        { name: "Python", level: 90, icon: "fab fa-python" },
-        { name: "JavaScript", level: 85, icon: "fab fa-js" },
-        { name: "C/C++", level: 75, icon: "fas fa-code" },
-        { name: "SQL", level: 80, icon: "fas fa-database" }
+        { name: "Python", level: 75, icon: "fab fa-python" },
+        { name: "JavaScript", level: 65, icon: "fab fa-js" },
+        { name: "C/C++", level: 65, icon: "fas fa-code" },
+        { name: "SQL", level: 75, icon: "fas fa-database" }
       ]
     },
     {
@@ -38,10 +38,10 @@ export default function Skills() {
       icon: "🌐",
       gradient: "from-purple-500 to-pink-500",
       skills: [
-        { name: "React", level: 85, icon: "fab fa-react" },
-        { name: "Django", level: 85, icon: "fas fa-server" },
-        { name: "HTML/CSS", level: 90, icon: "fab fa-html5" },
-        { name: "Tailwind CSS", level: 85, icon: "fas fa-palette" }
+        { name: "React", level: 65, icon: "fab fa-react" },
+        { name: "Django", level: 70, icon: "fas fa-server" },
+        { name: "HTML/CSS", level: 75, icon: "fab fa-html5" },
+        { name: "Tailwind CSS", level: 65, icon: "fas fa-palette" }
       ]
     },
     {
@@ -49,12 +49,12 @@ export default function Skills() {
       icon: "🤖",
       gradient: "from-green-500 to-teal-500",
       skills: [
-        { name: "TensorFlow", level: 80, icon: "fas fa-brain" },
-        { name: "OpenCV", level: 80, icon: "fas fa-camera" },
-        { name: "Scikit-Learn", level: 85, icon: "fas fa-chart-line" },
-        { name: "Hugging Face Transformers", level: 75, icon: "fas fa-table" },
-        { name: "MCPs", level: 70, icon: "fas fa-rss" },
-        { name: "Pandas/NumPy", level: 90, icon: "fas fa-table" }
+        { name: "TensorFlow", level: 70, icon: "fas fa-brain" },
+        { name: "OpenCV", level: 75, icon: "fas fa-camera" },
+        { name: "Scikit-Learn", level: 65, icon: "fas fa-chart-line" },
+        { name: "Hugging Face Transformers", level: 55, icon: "fas fa-table" },
+        { name: "MCPs", level: 50, icon: "fas fa-rss" },
+        { name: "Pandas/NumPy", level: 75, icon: "fas fa-table" }
       ]
     },
     {
@@ -62,10 +62,10 @@ export default function Skills() {
       icon: "📊",
       gradient: "from-orange-500 to-red-500",
       skills: [
-        { name: "Tableau", level: 80, icon: "fas fa-chart-bar" },
-        { name: "Power BI", level: 85, icon: "fas fa-chart-pie" },
-        { name: "PostgreSQL", level: 80, icon: "fas fa-database" },
-        { name: "KNIME", level: 70, icon: "fas fa-project-diagram" }
+        { name: "Tableau", level: 50, icon: "fas fa-chart-bar" },
+        { name: "Power BI", level: 65, icon: "fas fa-chart-pie" },
+        { name: "PostgreSQL", level: 75, icon: "fas fa-database" },
+        { name: "KNIME", level: 60, icon: "fas fa-project-diagram" }
       ]
     },
     {
@@ -74,9 +74,9 @@ export default function Skills() {
       gradient: "from-indigo-500 to-purple-500",
       skills: [
         { name: "Git/GitHub", level: 85, icon: "fab fa-github" },
-        { name: "Docker", level: 70, icon: "fab fa-docker" },
-        { name: "VS Code", level: 90, icon: "fas fa-code" },
-        { name: "Jupyter", level: 85, icon: "fas fa-book" }
+        { name: "Docker", level: 65, icon: "fab fa-docker" },
+        { name: "VS Code", level: 80, icon: "fas fa-code" },
+        { name: "Jupyter", level: 75, icon: "fas fa-book" }
       ]
     },
     {
@@ -84,10 +84,10 @@ export default function Skills() {
       icon: "🎯",
       gradient: "from-pink-500 to-rose-500",
       skills: [
-        { name: "Computer Vision", level: 80, icon: "fas fa-eye" },
-        { name: "Data Analysis", level: 90, icon: "fas fa-chart-area" },
-        { name: "Digital Twin", level: 75, icon: "fas fa-cube" },
-        { name: "REST APIs", level: 80, icon: "fas fa-plug" }
+        { name: "Computer Vision", level: 75, icon: "fas fa-eye" },
+        { name: "Data Analysis", level: 80, icon: "fas fa-chart-area" },
+        { name: "Digital Twin", level: 65, icon: "fas fa-cube" },
+        { name: "REST APIs", level: 75, icon: "fas fa-plug" }
       ]
     }
   ];
