@@ -4,6 +4,8 @@ Personal portfolio site. Software engineer working in Python — backend systems
 
 **Live:** https://selvam-dg.github.io/My_Portfolio/
 
+![Portfolio screenshot](public/screenshot.png)
+
 ## Stack
 
 - React 18 + Vite
@@ -66,9 +68,9 @@ npm run deploy     # build and publish to the gh-pages branch
 ## Contact
 
 - [LinkedIn](https://www.linkedin.com/in/selvamdasari55/) 
-- [GitHub](https://github.com/Selvam-DG) · dasariselvam321@gmail.com
+- [GitHub](https://github.com/Selvam-DG) 
+- [dasariselvam321@gmail.com](mailto:dasariselvam321@gmail.com)
 
 
 
-![Portfolio screenshot](public/screenshot.png)
 
