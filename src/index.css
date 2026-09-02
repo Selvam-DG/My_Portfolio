@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
 
 * {
   margin: 0;
@@ -25,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Custom Scrollbar */
+/* ---------- Scrollbar ---------- */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -43,25 +42,19 @@ h1, h2, h3, h4, h5, h6 {
   background: linear-gradient(180deg, #2563eb, #7c3aed);
 }
 
-/* Text Gradient */
+/* ---------- Text gradient ---------- */
 .text-gradient {
   background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Gradient Animation */
+/* ---------- Animated gradient background ---------- */
 @keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .animate-gradient {
@@ -69,120 +62,62 @@ h1, h2, h3, h4, h5, h6 {
   animation: gradient-shift 15s ease infinite;
 }
 
-/* Card Hover Effect */
+/* ---------- Card hover ---------- */
 .card-hover {
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .card-hover:hover {
   transform: translateY(-8px);
 }
 
-/* Button Ripple Effect */
-.ripple {
-  position: relative;
-  overflow: hidden;
+/* ---------- Marquee (hero skill strip) ---------- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
-.ripple::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  transform: translate(-50%, -50%);
-  transition: width 0.6s, height 0.6s;
+.marquee-track {
+  animation: marquee 20s linear infinite;
+  width: max-content;
 }
 
-.ripple:active::after {
-  width: 300px;
-  height: 300px;
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
 }
 
-/* Floating Animation */
-@keyframes float-icon {
-  0%, 100% { 
-    transform: translateY(0px) rotate(0deg); 
-  }
-  25% { 
-    transform: translateY(-10px) rotate(5deg); 
-  }
-  50% { 
-    transform: translateY(-5px) rotate(-5deg); 
-  }
-  75% { 
-    transform: translateY(-15px) rotate(3deg); 
-  }
+/* ---------- Float (particles) ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-20px); }
 }
 
-.float-icon {
-  animation: float-icon 6s ease-in-out infinite;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-@keyframes spin-orbit {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
-  }
-  @keyframes counter-spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(-360deg); }
-  }
-  .orbit-arm {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    transform-origin: center center;
-    animation: spin-orbit linear infinite;
-  }
-  .orbit-icon-wrapper {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    animation: counter-spin linear infinite;
-  }
-
-/* Typing Cursor */
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+/* ---------- Slow bounce (scroll indicator) ---------- */
+@keyframes bounce-slow {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -10px); }
 }
 
-.cursor-blink {
-  animation: blink 1s infinite;
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
 }
 
-/* Glow Effects */
-.glow-blue {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+/* ---------- Mobile menu slide ---------- */
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.glow-purple {
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+.animate-slide-down {
+  animation: slide-down 0.2s ease-out;
 }
 
-/* Fade In Delays */
-.fade-in-1 { animation: fadeIn 0.6s ease-out 0.1s backwards; }
-.fade-in-2 { animation: fadeIn 0.6s ease-out 0.2s backwards; }
-.fade-in-3 { animation: fadeIn 0.6s ease-out 0.3s backwards; }
-.fade-in-4 { animation: fadeIn 0.6s ease-out 0.4s backwards; }
-.fade-in-5 { animation: fadeIn 0.6s ease-out 0.5s backwards; }
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Selection Color */
+/* ---------- Selection ---------- */
 ::selection {
   background-color: #3b82f6;
   color: white;
@@ -193,17 +128,17 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
-/* Focus Styles */
+/* ---------- Focus ---------- */
 *:focus {
+  outline: none;
+}
+
+*:focus-visible {
   outline: 2px solid #3b82f6;
   outline-offset: 2px;
 }
 
-*:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Line Clamp Utilities */
+/* ---------- Line clamp ---------- */
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -216,4 +151,17 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .marquee-track,
+  .animate-float,
+  .animate-bounce-slow,
+  .animate-gradient,
+  .animate-slide-down {
+    animation: none;
+  }
+  .card-hover:hover { transform: none; }
 }

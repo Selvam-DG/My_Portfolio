@@ -1,98 +1,118 @@
 export default function Experience() {
   const experiences = [
     {
-      title: "Python Developer &  Master Thesis Student ",
+      title: "Independent Software Projects",
+      company: "Self-employed",
+      location: "Germany",
+      period: "May 2026 - Present",
+      type: "Freelance",
+      icon: "🛠️",
+      gradient: "from-blue-500 to-purple-600",
+      tasks: [
+        "Built and deployed LearnDeutsch — Flask REST API with SQLAlchemy over PostgreSQL, Alembic migrations, JWT authentication, React frontend, running live via Docker Compose with Gunicorn and Nginx",
+        "Built LearnPulse — Flask REST API with MongoDB and Pydantic validation, JWT access/refresh token authentication, pytest suite covering admin auth and protected routes",
+        "Deployed a Flask REST API with role-based access control to a K0s Kubernetes cluster from Docker Hub images",
+        "Ongoing work with RAG and LLM-backed services (LangChain, FAISS, ChromaDB) and Neo4j graph databases"
+      ]
+    },
+    {
+      title: "Python Developer (Master's Thesis)",
       company: "Think3DDD GbR",
       location: "Berlin, Germany",
-      period: "Oct 2025 - Mar 2026",
-      type: "Internship & Master Thesis",
+      period: "Oct 2025 - Apr 2026",
+      type: "Internship",
       icon: "🎓",
       gradient: "from-green-500 to-cyan-500",
       tasks: [
-        "Developed image preprocessing pipeline to optimize Photogrammetry 3D reconstruction",
-        "Built backend modules to receive orthopedic video data and orchestrate reconstruction workflow",
-        "Implemented WebSocket module for the reconstruction",
+        "Developed backend server modules that receive orthopedic video data, trigger reconstruction workflows, and return output files to the client",
+        "Implemented automated image-quality gates in OpenCV and NumPy — blur detection and duplicate filtering — so unusable frames are rejected before reconstruction runs rather than after",
+        "Built preprocessing stages (sharpening, normalization, enhancement) that improved reconstruction quality on raw scan data",
+        "Evaluated reconstruction performance across multiple datasets using Python, OpenCV and scikit-image",
+        "Master's thesis on optimizing photogrammetric reconstruction through preprocessing of raw images. Defended May 2026"
       ]
     },
     {
-      title: "Software Engineer Intern ",
+      title: "Software Engineer Intern",
       company: "fischer group",
       location: "Waldachtal, Germany",
-      period: "Mar 2025 - Sept 2025",
-      type: "Internship",
+      period: "Mar 2025 - Sep 2025",
+      type: "Internship · Digital Twin project",
       icon: "💼",
       gradient: "from-blue-500 to-cyan-500",
       tasks: [
-        "Designed and implemented an MSSQL database schema, migrating 1M+ records ",
-        "Developed a web application using Django (backend) and HTML, CSS, JavaScript (frontend)",
-        "Integrated Microsoft Entra ID (Azure AD) for secure internal authentication and role-based access control.",
-        "Established CI/CD pipelines in Azure DevOps, fully automating build, test, and deployment workflows for continuous delivery."
+        "Built a Django web application for the R&D team with role-based access — an admin portal for creating, updating and deleting records, and a read-only view for standard users",
+        "Integrated Microsoft Entra ID (Azure AD) authentication",
+        "Migrated 1M+ records from SharePoint and Excel sources into MS SQL Server using Python workflows, including validation and reconciliation of inconsistent source data",
+        "Designed the relational schema for the target MS SQL Server database",
+        "Containerized the application with Docker and deployed it through Azure DevOps CI/CD pipelines",
+        "Managed repositories and DevOps workflows in Azure DevOps; documented architecture and handover in Azure Boards and Wiki"
       ]
     },
     {
-      title: "Data & Process Analyst",
-      company: "MRF Tyres Ltd.",
-      location: "India",
-      period: "Oct 2021 - Aug 2023",
+      title: "Executive – Mechanical Engineering",
+      company: "MRF Limited",
+      location: "Hyderabad, India",
+      period: "Sep 2019 - Aug 2023",
       type: "Full-time",
       icon: "📊",
       gradient: "from-purple-500 to-pink-500",
       tasks: [
-        "Analyzed machine performance and delay data from MES and SAP using SQL and Excel to improve KPIs",
-        "Created dashboards with Power BI, Tableau, and Python for operational insights",
-        "Managed material master data and spare parts in SAP, improving resource planning",
-        "Applied Lean principles to reduce machine downtime and improve OEE"
-      ]
-    },
-    {
-      title: "Research Intern",
-      company: "Indian Institute of Science (IISc)",
-      location: "Bengaluru, India",
-      period: "May 2018 - Aug 2018",
-      type: "Internship",
-      icon: "🔬",
-      gradient: "from-green-500 to-teal-500",
-      tasks: [
-        "Gained hands-on experience in applied research and engineering data analysis",
-        "Worked on experimental data collection and statistical analysis projects"
+        "Analyzed machine performance and downtime data from MES and SAP using Python (Pandas, Matplotlib) to improve MTTR and MTBF",
+        "Built operational dashboards in Power BI and Tableau for production monitoring",
+        "Maintained material master data and spare-part codes in SAP",
+        "Supported commissioning of tyre building and bead apexing machines, analyzing PLC-driven data",
+        "Applied Lean methods to reduce downtime and improve overall equipment effectiveness (OEE)"
       ]
     }
   ];
 
   const education = [
     {
-      degree: "Master of Engineering Sciences ",
+      degree: "M.Sc. Engineering Sciences",
       school: "Technische Hochschule Rosenheim",
       location: "Germany",
-      period: "Oct 2023 - Dec 2025",
+      period: "Oct 2023 - 2026",
       icon: "🎓",
       gradient: "from-blue-500 to-purple-600",
       highlights: [
-        "Specialization in Mechatronics (AI, ML, CV)",
-        "Focus: Machine Learning, Computer Vision, Image Processing",
-        "Advanced Mathematics, Statistics, Data Science"
+        "Master's thesis: Optimizing Photogrammetric Reconstruction through Preprocessing of Raw Images Using Sharpness and Similarity Analysis",
+        "Master's project: Stereo Vision for Part Localization (12 ECTS)",
+        "Coursework: Image Processing for Automated Production, Machine Learning for Engineers, Model-Based Development"
       ]
     },
     {
-      degree: "Bachelor of Engineering in Mechanical Engineering",
-      school: "Pondicherry University",
+      degree: "B.Tech. Mechanical Engineering",
+      school: "Pondicherry Engineering College",
       location: "India",
       period: "Aug 2015 - Apr 2019",
       icon: "🎓",
       gradient: "from-orange-500 to-red-500",
       highlights: [
-        "First Class with Distinction",
-        "Thesis: Failure Analysis of Starter Motor using Statistical Data Analysis"
+        "First Class with Distinction"
+      ]
+    },
+    {
+      degree: "Berufssprachkurs Deutsch B2",
+      school: "PetersBILDUNGS Gruppe",
+      location: "Germany",
+      period: "Jun 2026 - Nov 2026",
+      icon: "🗣️",
+      gradient: "from-green-500 to-teal-500",
+      highlights: [
+        "Professional German language course, B2 level"
       ]
     }
   ];
 
   const certifications = [
-    { name: "Data Science and AI Certification", issuer: "IBM", date: "Mar 2024", icon: "fas fa-certificate" },
-    { name: "Machine Learning for Engineers", issuer: "FAU Erlangen", date: "Aug 2023", icon: "fas fa-robot" },
-    { name: "Complete Data Science Bootcamp", issuer: "Udemy", date: "Feb 2024", icon: "fas fa-graduation-cap" },
-    { name: "SQL & PostgreSQL", issuer: "Udemy", date: "Mar 2023", icon: "fas fa-database" }
+    { name: "Docker and Kubernetes", issuer: "Udemy", date: "Oct 2025", icon: "fab fa-docker" },
+    { name: "SQL and PostgreSQL", issuer: "Udemy", date: "Nov 2023", icon: "fas fa-database" },
+    { name: "Neo4j Certified Professional", issuer: "Neo4j", date: "Jul 2026", icon: "fas fa-project-diagram" },
+    { name: "Neo4j & Generative AI Fundamentals", issuer: "Neo4j", date: "Jul 2026", icon: "fas fa-robot" },
+    { name: "Machine Learning for Engineers", issuer: "FAU Erlangen-Nürnberg", date: "Apr 2024", icon: "fas fa-brain" },
+    { name: "Data Science and AI Certification", issuer: "IBM", date: "Mar 2024", icon: "fas fa-certificate" }
   ];
+
 
   return (
     <section id="experience" className="min-h-screen py-20 px-6 bg-slate-800 relative overflow-hidden">

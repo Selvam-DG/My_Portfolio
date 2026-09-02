@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
-export default function Navbar({ activeSection }) {
+export default function Navbar({ activeSection, isMobileMenuOpen, setIsMobileMenuOpen }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,19 +31,26 @@ export default function Navbar({ activeSection }) {
   const navItems = [
     { id: 'home', label: 'Home', icon: 'fas fa-home' },
     { id: 'about', label: 'About', icon: 'fas fa-user' },
-    { id: 'skills', label: 'Skills', icon: 'fas fa-code' },
     { id: 'experience', label: 'Experience', icon: 'fas fa-briefcase' },
     { id: 'projects', label: 'Projects', icon: 'fas fa-project-diagram' },
+    { id: 'skills', label: 'Skills', icon: 'fas fa-code' },
     { id: 'contact', label: 'Contact', icon: 'fas fa-envelope' },
   ];
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-lg shadow-lg shadow-blue-500/10' 
+      isScrolled || isMobileMenuOpen
+        ? 'bg-slate-900/95 backdrop-blur-lg shadow-lg shadow-blue-500/10'
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    {isMobileMenuOpen && (
+      <div
+        className="md:hidden fixed inset-0 bg-black/40"
+        onClick={() =>{console.log('backdrop tapped');  setIsMobileMenuOpen(false);}}
+        aria-hidden="true"
+      />
+    )}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <button 
@@ -80,7 +86,7 @@ export default function Navbar({ activeSection }) {
             className="hidden md:block bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 ripple"
           >
             <i className="fas fa-rocket mr-2"></i>
-            Hire Me
+            Get in Touch
           </button>
 
           {/* Mobile Menu Button */}
@@ -91,10 +97,10 @@ export default function Navbar({ activeSection }) {
             <i className={`fas ${isMobileMenuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
           </button>
         </div>
-
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 animate-slide-down">
+                    
+           <div className="md:hidden mt-4 pb-4 bg-slate-900/98 backdrop-blur-lg rounded-xl border border-slate-700 p-3 shadow-xl animate-slide-down">
             <ul className="space-y-2">
               {navItems.map((item) => (
                 <li key={item.id}>

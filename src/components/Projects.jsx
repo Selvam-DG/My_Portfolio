@@ -2,32 +2,15 @@ import { useState } from 'react';
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [expanded, setExpanded] = useState(null);
+  const [expandedAcademic, setExpandedAcademic] = useState(null);
 
-  const projects = [
+    const projects = [
     {
-      title: "LearnPulse",
-      description: "A micro-learning platform that provides quick, concise concept summaries across different subjects.",
-      stack: ["Flask API", "MongoDB","React-Vite", "JavaScript"],
-      category: "Full-Stack",
-      gradient: "from-indigo-500 to-blue-500",
-      github: "https://github.com/Selvam-DG/learnPulse",
-      demo: "https://60-sec-learning.vercel.app/",
-      icon: "fas fa-book"
-    },
-    {
-      title: "E-commerce API",
-      description: "A REST API for e-commerce operations built with Django REST framework and PostgreSQL",
-      stack: ["Django", "REST API","SDCL", "Postgres", "Authentication"],
-      category: "Backend",
-      gradient: "from-purple-500 to-green-500",
-      github: "https://github.com/Selvam-DG/ecommerce-api",
-      demo: null,
-      icon: "fas fa-shop"
-    },
-    {
-      title: "Learn Language",
-      description: "A vocabulary platform to search and learn a Language with practices or word for the days",
-      stack: ["Flask API", "Vite-ReactJs","TailwindCSS", "Postgres", "Docker", "Admin Authentication"],
+      title: "LearnDeutsch — German Learning Platform",
+      description: "Live German vocabulary and typing-practice platform, built and deployed end to end.",
+      details: "Flask REST API with SQLAlchemy over PostgreSQL, schema evolution managed through Alembic migrations, JWT authentication protecting admin CRUD routes. Bidirectional German–English search, deterministic daily vocabulary selection, timed typing practice with accuracy scoring, and draft/published states for content. React + Vite + TailwindCSS frontend. Deployed via Docker Compose with Gunicorn serving the API and Nginx serving the static build.",
+      stack: ["Python", "Flask", "SQLAlchemy", "PostgreSQL", "Alembic", "JWT", "React", "Docker", "Nginx"],
       category: "Full-Stack",
       gradient: "from-blue-500 to-cyan-500",
       github: "https://github.com/Selvam-DG/learn-german",
@@ -35,149 +18,106 @@ export default function Projects() {
       icon: "fas fa-book-open"
     },
     {
-      title: "Book Review Platform",
-      description: "A Web application to view, post or update Review of the Books.",
-      stack: ["Flask API", "React-TypeScript", "Postgres", "Kubernetes"],
-      category: "Full-Stack",
+      title: "Book Review Platform — REST API on Kubernetes",
+      description: "REST API with role-based access control, deployed to a Kubernetes cluster.",
+      details: "Deployed to a K0s Kubernetes cluster from images published on Docker Hub. Five related entities with cascading deletes and a database-level constraint enforcing one review per user per book. JWT authentication with role-based access control separating admin and user permissions, Werkzeug password hashing, token expiry handling. Centralized error handling and a health-check endpoint for cluster probes; stateless API pods with environment-based configuration.",
+      stack: ["Python", "Flask", "SQLAlchemy", "PostgreSQL", "JWT", "Docker", "Kubernetes", "TypeScript"],
+      category: "Backend",
       gradient: "from-indigo-500 to-purple-500",
       github: "https://github.com/Selvam-DG/book_review_platform",
       demo: null,
-      icon: "fas fa-tasks"
+      icon: "fas fa-server"
     },
     {
-      title: "RAG-LangChain-GroqLLMs",
-      description: "A Retrival Augmetented Generative AI project using LangChain Groq LLMs with custom dataset.",
-      stack: ["Python", "LangChain", "GROQ-LLMs", "ChromaDB"],
-      category: "AI",
-      gradient: "from-green-500 to-purple-500",
-      github: "https://github.com/Selvam-DG/RAG-project1-langchain",
-      demo: null,
-      icon: "fas fa-database"
+      title: "LearnPulse — Concept-Card Learning Platform",
+      description: "Live concept-card learning platform with a tested admin API.",
+      details: "Flask REST API with MongoDB, request validation via Pydantic, JWT access and refresh token authentication guarding the admin panel, indexed collections for topic and full-text search. Test suite in pytest covering admin authentication, protected routes and health checks. React + Vite frontend with markdown rendering and PrismJS syntax highlighting, containerized with Docker Compose.",
+      stack: ["Python", "Flask", "MongoDB", "Pydantic", "JWT", "pytest", "React", "Docker"],
+      category: "Full-Stack",
+      gradient: "from-indigo-500 to-blue-500",
+      github: "https://github.com/Selvam-DG/learnPulse",
+      demo: "https://learnpulse.selvam-dg.xyz",
+      icon: "fas fa-book"
     },
     {
-      title: "API Mastery",
-      description: "A basic projects to understand different types of APIs.",
-      stack: ["Python","APIs"],
+      title: "E-commerce API",
+      description: "Django REST API for product catalog, cart and order workflows.",
+      details: "Built with Django REST Framework over PostgreSQL. JWT authentication with role-based access across customer, vendor and admin roles; product catalog with category hierarchies and inventory tracking; cart and order workflows. Dockerized with a pytest test suite and OpenAPI documentation via drf-spectacular.",
+      stack: ["Python", "Django", "Django REST Framework", "PostgreSQL", "JWT", "Docker", "pytest"],
       category: "Backend",
-      gradient: "from-pink-500 to-purple-500",
-      github: "https://github.com/Selvam-DG/API-mastery",
-      demo: null,
-      icon: "fas fa-rss"
-    },
-     {
-      title: "E-commerce Frontend",
-      description: "Modern Frontend application for e-commerce platform built with React-Vite, TailwindCSS",
-      stack: ["JavaScript", "ReactJs-Vite","TailwindCSS", "ReactRouter", "Axios","JWT Authentication"],
-      category: "Frontend",
-      gradient: "from-green-500 to-purple-500",
-      github: "https://github.com/Selvam-DG/ecommerce-frontend",
+      gradient: "from-green-500 to-teal-500",
+      github: "https://github.com/Selvam-DG/ecommerce-api",
       demo: null,
       icon: "fas fa-shop"
     },
     {
-      title: "Efficio - Project Management",
-      description: "A role-based project management platform for tracking projects and tasks across all employees in an organization with real-time updates.",
-      stack: ["Django REST", "React", "SQLite", "REST API"],
-      category: "Full-Stack",
-      gradient: "from-blue-500 to-cyan-500",
-      github: "https://github.com/Selvam-DG/Efficio",
-      demo: null,
-      icon: "fas fa-tasks"
-    },
-    {
-      title: "MCP-Demo",
-      description: "A small demo mcp project to make mcp servers and clients, and give responses to user queries.",
-      stack: ["Python", "LangChain", "OpenRouter", "Groq-llms"],
+      title: "RAG Document Search",
+      description: "Retrieval-augmented search over PDF documents, comparing two vector stores.",
+      details: "Text extraction with PyMuPDF, configurable chunking, sentence embeddings indexed in both FAISS and ChromaDB for comparison, and answer generation through Groq LLMs via LangChain. Persistent vector indices with incremental document addition, and relevance scoring on retrieved chunks.",
+      stack: ["Python", "LangChain", "FAISS", "ChromaDB", "Groq", "PyMuPDF"],
       category: "AI",
-      gradient: "from-red-500 to-orange-500",
-      github: "https://github.com/Selvam-DG/mcp-project-openrouter",
-      icon: "fa fa-desktop"
-    },
-    {
-      title: "SpendaliQ - Expense Tracker",
-      description: "An intuitive personal expense tracker with user authentication, real-time data sync and cloud storage using Firebase.",
-      stack: ["React", "Firebase", "Tailwind CSS", "Authentication"],
-      category: "Full-Stack",
-      gradient: "from-green-500 to-teal-500",
-      github: "https://github.com/Selvam-DG/SpendaliQ",
+      gradient: "from-green-500 to-purple-500",
+      github: "https://github.com/Selvam-DG/RAG-project1-langchain",
       demo: null,
-      icon: "fas fa-wallet"
+      icon: "fas fa-magnifying-glass"
     },
     {
-      title: "Blog Platform - DSRT",
-      description: "A modern blog application with decoupled architecture using Django APIs, Supabase for backend services, and React frontend.",
-      stack: ["Django REST", "Supabase", "React", "PostgreSQL"],
-      category: "Full-Stack",
-      gradient: "from-purple-500 to-pink-500",
-      github: "https://github.com/Selvam-DG/Blog-DSRT",
-      demo: "https://blog-drp.vercel.app/",
-      icon: "fas fa-blog"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A weather visualization dashboard that fetches real-time weather data via OpenMeteo API with responsive and modern UI design.",
-      stack: ["React", "Tailwind CSS", "OpenMeteo API", "Charts"],
-      category: "Frontend",
-      gradient: "from-orange-500 to-red-500",
-      github: "https://github.com/Selvam-DG/Weather-Dashboard",
-      demo: "https://weather-om.vercel.app/",
-      icon: "fas fa-cloud-sun"
-    },
-    {
-      title: "Stereo Vision Depth Estimation",
-      description: "Master's project for part localization using stereo camera system, calibration with OpenCV, and 3D coordinate extraction.",
-      stack: ["Python", "OpenCV", "Computer Vision", "NumPy"],
+      title: "Neo4j GraphRAG Movie Assistant",
+      description: "Graph-backed retrieval assistant combining Cypher traversal with LLM generation.",
+      details: "Cypher queries traverse relationships between users, films, genres and people in a movie knowledge graph to retrieve context, which is then passed to an LLM for answer generation — combining graph traversal with generative retrieval rather than relying on vector similarity alone.",
+      stack: ["Python", "Neo4j", "Cypher", "LangChain", "LLM APIs"],
       category: "AI",
-      gradient: "from-indigo-500 to-purple-500",
-      github: null,
+      gradient: "from-cyan-500 to-blue-500",
+      github: "https://github.com/Selvam-DG/neo4j-graphrag-movie-assistant",
+      demo: null,
+      icon: "fas fa-project-diagram"
+    },
+    {
+      title: "Photogrammetry Image Preprocessing",
+      description: "OpenCV pipeline that scores and preprocesses scan images before 3D reconstruction.",
+      details: "Modular OpenCV and scikit-image pipeline improving lighting, contrast and noise in raw scan images, with automated quality scoring for sharpness and redundancy. Developed as part of Master's thesis work on optimizing photogrammetric reconstruction.",
+      stack: ["Python", "OpenCV", "scikit-image", "NumPy", "Computer Vision"],
+      category: "AI",
+      gradient: "from-pink-500 to-rose-500",
+      github: "https://github.com/Selvam-DG/photogrammetry-image-preprocessing",
       demo: null,
       icon: "fas fa-camera"
-    },
-    {
-      title: "ML Models - Titanic Dataset",
-      description: "Implemented comprehensive EDA and RandomForest classification models on Titanic Dataset as part of Kaggle competitions.",
-      stack: ["Python", "Pandas", "Scikit-Learn", "Matplotlib"],
-      category: "Data Science",
-      gradient: "from-pink-500 to-rose-500",
-      github: null,
-      kaggle: "https://www.kaggle.com/code/dgselvam/titanic-dataset",
-      icon: "fas fa-ship"
     }
   ];
 
-  const academicProjects = [
+    const academicProjects = [
+    {
+      title: "Optimizing Photogrammetric Reconstruction through Preprocessing of Raw Images",
+      period: "October 2025 – April 2026",
+      type: "Master's Thesis · 25 ECTS · Defended May 2026",
+      institution: "TH Rosenheim, in collaboration with Think3DDD GbR, Berlin",
+      description: "Automated image-quality assessment to improve 3D reconstruction from raw scan data.",
+      details: "Photogrammetric reconstruction degrades when input images are blurred or redundant, and the cost only becomes visible after a long reconstruction run. I built quality gates in OpenCV and NumPy that score frames for sharpness and similarity before reconstruction, rejecting unusable input up front rather than after. Alongside this, preprocessing stages for sharpening, normalization and enhancement improve the images that do pass. Performance was evaluated across multiple datasets using Python, OpenCV, scikit-image and custom evaluation pipelines.",
+      github: "https://github.com/Selvam-DG/Master-Thesis",
+      stack: ["Python", "OpenCV", "scikit-image", "NumPy", "Photogrammetry"]
+    },
     {
       title: "Stereo Vision-Based Depth Estimation for Part Localization",
-      period: "February 2024 - July 2024",
-      type: "Master's Project",
-      institution: "Technische Hochschule Rosenheim, Germany",
-      points: [
-        "Installed and configured a stereo camera system for depth estimation",
-        "Performed stereo camera calibration using OpenCV to correct distortion",
-        "Developed pipeline to compute disparity maps using stereo match algorithms",
-        "Extracted 3D spatial coordinates (X,Y,Z) from 2D disparity data"
-      ]
-    },
-    {
-      title: "Failure Analysis of Starter Motor using Statistical Data Analysis",
-      period: "January 2019 - May 2019",
-      type: "Bachelor Thesis",
-      institution: "Lucas TVS Ltd., Puducherry, India",
-      points: [
-        "Conducted failure analysis of starter motors based on surge fail test",
-        "Utilized Minitab for statistical data analysis and process capability studies",
-        "Applied DMAIC methodology to structure root cause analysis process",
-        "Recommended corrective actions to improve manufacturing quality"
-      ]
+      period: "February 2024 – July 2024",
+      type: "Master's Project · 12 ECTS",
+      institution: "Technische Hochschule Rosenheim",
+      description: "Stereo camera system for locating jumbled, occluded parts in a bin for robotic picking.",
+      details: "Robotic bin-picking needs 3D coordinates for objects that are non-oriented, overlapping and partially hidden. I configured a stereo camera setup using Alvium G1-240m/c cameras, calibrated it with OpenCV chessboard-pattern calibration to correct lens distortion, and built a pipeline computing disparity maps through stereo matching. From the 2D disparity data the pipeline extracts 3D spatial coordinates for each detected part. The system was validated for accuracy and reliability across a range of real-world test scenarios.",
+      github: "https://github.com/Selvam-DG/Stereo_Vision_3d",
+      stack: ["Python", "OpenCV", "C++", "NumPy", "Computer Vision"]
     }
   ];
 
-  const categories = ['All','AI', 'Full-Stack', 'Frontend', 'Backend', 'Data Science'];
+  const categories = ['All', 'Full-Stack', 'Backend', 'AI'];
 
   const filteredProjects = activeCategory === 'All' 
     ? projects 
     : projects.filter(p => p.category === activeCategory);
-    
+  
+  const handleCategoryChange = (category) => {
+  setActiveCategory(category);
+  setExpanded(null);
+  };
 
   return (
     <section id="projects" className="min-h-screen py-20 px-6 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
@@ -239,10 +179,24 @@ export default function Projects() {
                     </h3>
 
                     {/* Description */}
-                    <p className="text-gray-400 text-sm mb-4 line-clamp-3 leading-relaxed">
+                    <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                       {project.description}
                     </p>
-
+                    {project.details && (
+                      <>
+                        {expanded === idx && (
+                          <p className="text-gray-400 text-sm mb-3 leading-relaxed border-l-2 border-slate-700 pl-3">
+                            {project.details}
+                          </p>
+                        )}
+                        <button
+                          onClick={() => setExpanded(expanded === idx ? null : idx)}
+                          className="text-blue-400 text-xs font-semibold mb-4 hover:text-blue-300 transition-colors"
+                        >
+                          {expanded === idx ? 'Show less' : 'Technical details →'}
+                        </button>
+                      </>
+                    )}
                     {/* Tech Stack */}
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.stack.map((tech, techIdx) => (
@@ -302,32 +256,57 @@ export default function Projects() {
                 <span className="text-4xl">📘</span>
                 Academic Projects
               </h3>
-              
+
               <div className="space-y-6">
                 {academicProjects.map((project, idx) => (
                   <div
                     key={idx}
                     className="bg-slate-800/50 rounded-xl p-6 border-l-4 border-blue-500 hover:bg-slate-800 transition-all"
                   >
-                    <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                      <div>
-                        <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
-                        <p className="text-blue-400 font-semibold mb-1">{project.institution}</p>
-                        <p className="text-sm text-gray-400">
-                          <i className="fas fa-calendar mr-2"></i>
-                          {project.period} | {project.type}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    <ul className="space-y-2">
-                      {project.points.map((point, pointIdx) => (
-                        <li key={pointIdx} className="flex items-start gap-3 text-gray-300">
-                          <i className="fas fa-check-circle text-green-400 mt-1 flex-shrink-0"></i>
-                          <span>{point}</span>
-                        </li>
+                    <h4 className="text-xl font-bold text-white mb-2">{project.title}</h4>
+                    <p className="text-blue-400 font-semibold mb-1">{project.institution}</p>
+                    <p className="text-sm text-gray-400 mb-4">
+                      <i className="fas fa-calendar mr-2"></i>
+                      {project.period} · {project.type}
+                    </p>
+
+                    <p className="text-gray-300 mb-3 leading-relaxed">{project.description}</p>
+
+                    {expandedAcademic === idx && (
+                      <p className="text-gray-400 text-sm mb-3 leading-relaxed border-l-2 border-slate-700 pl-3">
+                        {project.details}
+                      </p>
+                    )}
+
+                    <button
+                      onClick={() => setExpandedAcademic(expandedAcademic === idx ? null : idx)}
+                      className="text-blue-400 text-xs font-semibold hover:text-blue-300 transition-colors"
+                    >
+                      {expandedAcademic === idx ? 'Show less' : 'Technical details →'}
+                    </button>
+
+                    <div className="flex flex-wrap gap-2 mt-4 mb-4">
+                      {project.stack.map((tech, techIdx) => (
+                        <span
+                          key={techIdx}
+                          className="bg-slate-800 text-gray-300 px-3 py-1 rounded-full text-xs font-medium border border-slate-700"
+                        >
+                          {tech}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
+
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-gray-300 hover:text-blue-400 transition-colors"
+                      >
+                        <i className="fab fa-github"></i>
+                        View on GitHub
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
